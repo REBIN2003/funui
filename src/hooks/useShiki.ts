@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 // Third-party Imports
 import { codeToHtml, createHighlighter } from 'shiki'
@@ -9,12 +9,19 @@ import type { BundledLanguage, Highlighter } from 'shiki'
 
 let highlighterPromise: Promise<Highlighter> | null = null
 
+// Module-level cache shared by every CodeBlock, so re-opening a dialog is instant
+const highlightedCache = new Map<string, string>()
+
 // Initialize the highlighter once for the entire application
 const getHighlighter = () => {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighter({
       themes: ['github-light', 'github-dark'],
       langs: ['html', 'css', 'js', 'ts', 'tsx', 'json']
+    }).catch(error => {
+      // Allow a retry on the next call instead of caching the rejection forever
+      highlighterPromise = null
+      throw error
     })
   }
 
@@ -31,78 +38,52 @@ if (typeof window !== 'undefined') {
 export const useShiki = () => {
   // States
   const [isHighlighterReady, setIsHighlighterReady] = useState(false)
-  const [highlightedCache, setHighlightedCache] = useState<Record<string, string>>({})
-
-  // Refs
-  const highlighterRef = useRef<Highlighter | null>(null)
 
   useEffect(() => {
-    // Try to load the highlighter immediately when the component mounts
+    let active = true
+
     getHighlighter()
-      .then(highlighter => {
-        highlighterRef.current = highlighter
-        setIsHighlighterReady(true)
+      .then(() => {
+        if (active) setIsHighlighterReady(true)
       })
       .catch(error => {
         console.error('Failed to initialize syntax highlighter:', error)
       })
 
     return () => {
-      setIsHighlighterReady(false)
-      setHighlightedCache({})
+      active = false
     }
   }, [])
 
-  const highlightCode = useCallback(
-    async (code: string, lang: string) => {
-      if (!isHighlighterReady && !highlighterRef.current) {
-        try {
-          // If not ready yet, try to get and use the highlighter directly
-          highlighterRef.current = await getHighlighter()
-          setIsHighlighterReady(true)
-        } catch (error) {
-          console.error('Error getting highlighter:', error)
+  // Stable callback. Returns highlighted HTML, or null when highlighting fails —
+  // never raw source, since callers render the result as HTML.
+  const highlightCode = useCallback(async (code: string, lang: string): Promise<string | null> => {
+    const cacheKey = `${lang}:${code}`
+    const cached = highlightedCache.get(cacheKey)
 
-          return code
+    if (cached) return cached
+
+    try {
+      const highlighted = await codeToHtml(code, {
+        lang: lang as BundledLanguage,
+        themes: {
+          light: 'github-light',
+          dark: 'github-dark'
         }
-      }
+      })
 
-      // Create a cache key from the code and language
-      const cacheKey = `${lang}:${code}`
+      highlightedCache.set(cacheKey, highlighted)
 
-      // Check if we already have this highlighted code in cache
-      if (highlightedCache[cacheKey]) {
-        return highlightedCache[cacheKey]
-      }
+      return highlighted
+    } catch (error) {
+      console.error(`Error highlighting code with language ${lang}:`, error)
 
-      try {
-        const highlighted = await codeToHtml(code, {
-          lang: lang as BundledLanguage,
-          themes: {
-            light: 'github-light',
-            dark: 'github-dark'
-          }
-        })
-
-        // Store in cache
-        setHighlightedCache(prev => ({
-          ...prev,
-          [cacheKey]: highlighted
-        }))
-
-        return highlighted
-      } catch (error) {
-        console.error(`Error highlighting code with language ${lang}:`, error)
-
-        return code
-      }
-    },
-    [isHighlighterReady, highlightedCache]
-  )
+      return null
+    }
+  }, [])
 
   return {
     highlightCode,
-    isHighlighterReady: isHighlighterReady || highlighterRef.current !== null,
-    highlightedCache
+    isHighlighterReady
   }
 }

@@ -1,3 +1,7 @@
+// Node Imports
+import path from 'path'
+import { promises as fs } from 'fs'
+
 // React Imports
 import { cache } from 'react'
 
@@ -20,24 +24,16 @@ export const getComponentsByNames = (names: string[]): RegistryItem[] => {
   return names.map(name => componentsMap.get(name)).filter((comp): comp is RegistryItem => comp !== undefined)
 }
 
-async function getFileContent(file: NonNullable<RegistryItem['files']>[number]) {
+// Read source files straight from disk. Previously this made an HTTP request to our own
+// /api/get-file-content route for every file, which broke whenever NEXT_PUBLIC_APP_URL was
+// unset/wrong, flooded the server on large categories, and crashed the page on any failure.
+async function getFileContent(file: NonNullable<RegistryItem['files']>[number]): Promise<string> {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL!}/api/get-file-content?path=${encodeURIComponent(file.path)}`
-    )
+    return await fs.readFile(path.join(process.cwd(), file.path), 'utf-8')
+  } catch (error) {
+    console.error(`Error reading file content for ${file.path}:`, error)
 
-    if (!response.ok) {
-      const errorData = await response.json()
-
-      console.error('API error:', errorData.error || response.statusText)
-    }
-
-    const data = await response.json()
-
-    return data.content
-  } catch (error: any) {
-    console.error('Error fetching file content:', error)
-    throw error
+    return ''
   }
 }
 
@@ -217,18 +213,13 @@ export async function getComponentItem(name: string) {
     return null
   }
 
-  const files: RegistryItem['files'] = []
-
-  for (const file of item.files ?? []) {
-    const content = await getFileContent(file)
-    const relativePath = file.path.replace('src/', '')
-
-    files.push({
+  const files: RegistryItem['files'] = await Promise.all(
+    item.files.map(async file => ({
       ...file,
-      path: relativePath,
-      content
-    })
-  }
+      path: file.path.replace('src/', ''),
+      content: await getFileContent(file)
+    }))
+  )
 
   if (item.cssVars || item.css) {
     const stylesFile = getComponentStyles(item)

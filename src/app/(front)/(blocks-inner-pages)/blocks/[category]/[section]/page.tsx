@@ -127,22 +127,16 @@ const BlockInnerPage = async ({ params }: Props) => {
 
       <div className='flex flex-col gap-4 px-4 py-12 max-xl:place-items-center max-xl:items-center max-xl:text-center sm:gap-8 sm:px-6 lg:px-8'>
         <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
-          {sectionBlocksData.map((block, index) => {
-            const sectionBlockData = blockCategories
-              .filter(category => category.slug === block.category)[0]
-              .sections.filter(section => section.slug === block.section)[0]
-
-            return (
-              <Link key={index} href={`/preview/${block.category}/${block.section}/${block.slug}`} target='_blank'>
-                <BlockPage
-                  sectionBlockData={sectionBlockData}
-                  sectionBlocksData={sectionBlocksData}
-                  index={index}
-                  section={section}
-                />
-              </Link>
-            )
-          })}
+          {sectionBlocksData.map((block, index) => (
+            <Link key={block.slug} href={`/preview/${category}/${section}/${block.slug}`} target='_blank'>
+              <BlockPage
+                sectionBlockData={sectionData}
+                sectionBlocksData={sectionBlocksData}
+                index={index}
+                section={section}
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </>

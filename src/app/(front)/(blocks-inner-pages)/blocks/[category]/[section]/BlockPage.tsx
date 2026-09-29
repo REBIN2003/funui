@@ -32,7 +32,11 @@ const BlockPage = ({ index, sectionBlockData, sectionBlocksData, section }: Prop
   const handleButtonClick = (e: MouseEvent<HTMLButtonElement>, blockSlug: string) => {
     e.preventDefault()
 
-    copy(`npx shadcn@latest add ${process.env.NEXT_PUBLIC_APP_URL}/r/${blockSlug}.json`)
+    // Fall back to the current origin if NEXT_PUBLIC_APP_URL wasn't set at build time, so the
+    // copied command never contains the literal string "undefined" as its host.
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || window.location.origin
+
+    copy(`npx shadcn@latest add ${appUrl}/r/${blockSlug}.json`)
   }
 
   return (

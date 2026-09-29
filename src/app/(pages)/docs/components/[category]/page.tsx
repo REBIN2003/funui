@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const components = getComponentsByNames(category.components.map(item => item.name))
+  const name = category.name.toLowerCase()
 
   return {
     title: `Shadcn ${category.name}`,

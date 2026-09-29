@@ -32,7 +32,7 @@ export const highlight = async (code: string, lang: BundledLanguage) => {
 
 const CodeBlock = ({ code, lang }: { code: string | null; lang: BundledLanguage }) => {
   // States
-  const [highlightedCode, setHighlightedCode] = useState('')
+  const [highlightedCode, setHighlightedCode] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   // Hooks
@@ -41,23 +41,27 @@ const CodeBlock = ({ code, lang }: { code: string | null; lang: BundledLanguage 
   useEffect(() => {
     if (!isHighlighterReady) return
 
-    const highlightTab = async () => {
-      if (code) {
-        try {
-          const highlighted = await highlightCode(code, lang)
+    // Ignore results from a previous file if the user switched files mid-highlight
+    let active = true
 
-          setHighlightedCode(highlighted)
-        } catch (error) {
-          console.error('Error highlighting code:', error)
-        }
-      }
+    if (!code) {
+      setHighlightedCode(null)
+      setIsLoading(false)
+
+      return
     }
 
-    // Highlight active tab first
-    highlightTab().then(() => {
+    highlightCode(code, lang).then(highlighted => {
+      if (!active) return
+
+      setHighlightedCode(highlighted)
       setIsLoading(false)
     })
-  }, [isHighlighterReady, highlightCode, highlightedCode, code, lang])
+
+    return () => {
+      active = false
+    }
+  }, [isHighlighterReady, highlightCode, code, lang])
 
   return isLoading ? (
     <div className='flex min-h-40 flex-1 items-center justify-center p-4'>
@@ -69,9 +73,9 @@ const CodeBlock = ({ code, lang }: { code: string | null; lang: BundledLanguage 
       dangerouslySetInnerHTML={{ __html: highlightedCode }}
     />
   ) : (
-    <div className='p-4'>
-      <code className='text-sm'>{code}</code>
-    </div>
+    <pre className='max-h-[350px] overflow-auto p-4'>
+      <code className='font-mono text-[13px]'>{code}</code>
+    </pre>
   )
 }
 

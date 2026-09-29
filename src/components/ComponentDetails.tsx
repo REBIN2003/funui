@@ -24,7 +24,11 @@ import CopyButton from '@/components/CopyButton'
 import CodeBlock from '@/components/CodeBlock'
 import CodeBlockMultipleView from './CodeBlockMultipleView'
 
-const ComponentDetails = ({ componentsData }: { componentsData: ProcessedComponentsData }) => {
+const ComponentDetails = ({ componentsData }: { componentsData?: ProcessedComponentsData }) => {
+  if (!componentsData) {
+    return null
+  }
+
   const { component, tree } = componentsData
 
   return (

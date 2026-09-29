@@ -10,6 +10,9 @@ import registry from '@/../registry.json'
 // Data Imports
 import { blockCategories } from '@/assets/data/blocks-index'
 
+// Metadata-only helpers, safe to import from client components (e.g. BlocksIndexContent).
+// File-content reading (fs-backed) lives in utils/blocksServer.ts instead — importing it here
+// would pull `fs`/`server-only` into any client bundle that imports this file.
 const blocks: RegistryItem[] = registry.items.filter(item => item.type === 'registry:block') as RegistryItem[]
 
 export const getBlockCategory = (category: string): CategoriesType | undefined => {

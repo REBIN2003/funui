@@ -24,7 +24,15 @@ import CopyButton from '@/components/CopyButton'
 import CodeBlock from '@/components/CodeBlock'
 import CodeBlockMultipleView from './CodeBlockMultipleView'
 
-const ComponentDetails = ({ componentsData }: { componentsData?: ProcessedComponentsData }) => {
+type Props = {
+  componentsData?: ProcessedComponentsData
+  // 'overlay' (default): the hover-only icon button positioned over a ComponentCard.
+  // 'inline': a plain outline icon button that sits in normal flow (e.g. next to the block
+  // "Copy CLI" button), for contexts that aren't a hover-revealed card overlay.
+  variant?: 'overlay' | 'inline'
+}
+
+const ComponentDetails = ({ componentsData, variant = 'overlay' }: Props) => {
   if (!componentsData) {
     return null
   }
@@ -32,19 +40,26 @@ const ComponentDetails = ({ componentsData }: { componentsData?: ProcessedCompon
   const { component, tree } = componentsData
 
   return (
-    <div className='absolute end-2 top-2 flex items-center gap-2'>
+    <div className={variant === 'overlay' ? 'absolute end-2 top-2 flex items-center gap-2' : 'contents'}>
       <Dialog>
         <Tooltip>
           <TooltipTrigger asChild>
             <DialogTrigger asChild>
-              <Button
-                variant='ghost'
-                size='icon'
-                className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
-              >
-                <Code />
-                <span className='sr-only'>View code</span>
-              </Button>
+              {variant === 'overlay' ? (
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  className='text-muted-foreground hover:text-foreground cursor-pointer opacity-0 transition-none group-focus-within/item:opacity-100 group-hover/item:opacity-100 hover:!bg-transparent disabled:opacity-100'
+                >
+                  <Code />
+                  <span className='sr-only'>View code</span>
+                </Button>
+              ) : (
+                <Button variant='outline' size='icon' className='size-7 rounded-sm'>
+                  <Code />
+                  <span className='sr-only'>View code</span>
+                </Button>
+              )}
             </DialogTrigger>
           </TooltipTrigger>
           <TooltipContent>View code</TooltipContent>

@@ -1,18 +1,14 @@
-// Node Imports
-import path from 'path'
-import { promises as fs } from 'fs'
-
 // React Imports
 import { cache } from 'react'
 
 // Third-party Imports
 import type { RegistryItem } from 'shadcn/schema'
 
-// Type Imports
-import type { FileTree } from '@/types/components'
-
 // Registry Import
 import registryJson from '@/../registry.json'
+
+// Util Imports
+import { getFileContent, createFileTreeForComponentItemFiles } from '@/utils/serverHelpers'
 
 const components: RegistryItem[] = (registryJson.items as RegistryItem[]).filter(
   item => item.type === 'registry:component'
@@ -22,23 +18,6 @@ export const getComponentsByNames = (names: string[]): RegistryItem[] => {
   const componentsMap = new Map(components.map(comp => [comp.name, comp]))
 
   return names.map(name => componentsMap.get(name)).filter((comp): comp is RegistryItem => comp !== undefined)
-}
-
-// Read source files straight from disk. Previously this made an HTTP request to a public
-// /api/get-file-content route for every file, which broke whenever NEXT_PUBLIC_APP_URL was
-// unset/wrong, flooded the server on large categories, crashed the page on any failure, and
-// exposed the whole src/ tree over HTTP for no reason. That route has since been removed.
-async function getFileContent(file: NonNullable<RegistryItem['files']>[number]): Promise<string> {
-  try {
-    // file.path always comes from our own registry.json (files under src/), never from user
-    // input, so this is safe. The ignore comment stops Turbopack from tracing/bundling the
-    // whole project just because it sees a dynamic fs read.
-    return await fs.readFile(path.join(/* turbopackIgnore: true */ process.cwd(), file.path), 'utf-8')
-  } catch (error) {
-    console.error(`Error reading file content for ${file.path}:`, error)
-
-    return ''
-  }
 }
 
 export function getComponentStyles(component: RegistryItem): NonNullable<RegistryItem['files']>[number] {
@@ -237,42 +216,6 @@ export async function getComponentItem(name: string) {
   }
 
   return ComponentItem
-}
-
-export function createFileTreeForComponentItemFiles(files: Array<{ path: string; target?: string }>) {
-  const root: FileTree[] = []
-
-  for (const file of files) {
-    const path = file.target ?? file.path.replace('src/', '')
-    const parts = path.split('/')
-    let currentLevel = root
-
-    for (let i = 0; i < parts.length; i++) {
-      const part = parts[i]
-      const isFile = i === parts.length - 1
-      const existingNode = currentLevel.find(node => node.name === part)
-
-      if (existingNode) {
-        if (isFile) {
-          // Update existing file node with full path
-          existingNode.path = path
-        } else {
-          // Move to next level in the tree
-          currentLevel = existingNode.children!
-        }
-      } else {
-        const newNode: FileTree = isFile ? { name: part, path } : { name: part, children: [] }
-
-        currentLevel.push(newNode)
-
-        if (!isFile) {
-          currentLevel = newNode.children!
-        }
-      }
-    }
-  }
-
-  return root
 }
 
 export const getCachedComponentItem = cache(async (name: string) => {

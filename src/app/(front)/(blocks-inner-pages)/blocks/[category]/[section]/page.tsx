@@ -20,6 +20,10 @@ import BlockPage from './BlockPage'
 
 // Util Imports
 import { getBlockCategory, getBlockSection, getSectionData } from '@/utils/blocks'
+import { getCachedBlockItem, getCachedBlockFileTree } from '@/utils/blocksServer'
+
+// Type Imports
+import type { ProcessedComponentsData } from '@/types/components'
 
 // Data Imports
 import { blockCategories } from '@/assets/data/blocks-index'
@@ -127,16 +131,28 @@ const BlockInnerPage = async ({ params }: Props) => {
 
       <div className='flex flex-col gap-4 px-4 py-12 max-xl:place-items-center max-xl:items-center max-xl:text-center sm:gap-8 sm:px-6 lg:px-8'>
         <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
-          {sectionBlocksData.map((block, index) => (
-            <Link key={block.slug} href={`/preview/${category}/${section}/${block.slug}`} target='_blank'>
-              <BlockPage
-                sectionBlockData={sectionData}
-                sectionBlocksData={sectionBlocksData}
-                index={index}
-                section={section}
-              />
-            </Link>
-          ))}
+          {await Promise.all(
+            sectionBlocksData.map(async (block, index) => {
+              const item = await getCachedBlockItem(block.slug)
+              const tree = item?.files ? getCachedBlockFileTree(item.files) : null
+
+              const componentsData: ProcessedComponentsData | undefined = item
+                ? { component: item, tree }
+                : undefined
+
+              return (
+                <BlockPage
+                  key={block.slug}
+                  sectionBlockData={sectionData}
+                  sectionBlocksData={sectionBlocksData}
+                  index={index}
+                  section={section}
+                  category={category}
+                  componentsData={componentsData}
+                />
+              )
+            })
+          )}
         </div>
       </div>
     </>

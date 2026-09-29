@@ -15,11 +15,16 @@ const ComponentCli = ({ name, toast }: { name: string; toast?: string }) => {
   const [packageManager, setPackageManager] = useLocalStorage<PackageManager>('packageManager', 'pnpm')
 
   // Vars
+  const registryUrl =
+    process.env.NEXT_PUBLIC_APP_URL && !process.env.NEXT_PUBLIC_APP_URL.includes('localhost')
+      ? process.env.NEXT_PUBLIC_APP_URL.replace(/\/$/, '')
+      : 'https://funui1.netlify.app'
+
   const commands = {
-    pnpm: `pnpm dlx shadcn@latest add http://localhost:3000/r/${name}.json`,
-    npm: `npx shadcn@latest add http://localhost:3000/r/${name}.json`,
-    yarn: `yarn shadcn@latest add http://localhost:3000/r/${name}.json`,
-    bun: `bunx --bun shadcn@latest add http://localhost:3000/r/${name}.json`
+    pnpm: `pnpm dlx shadcn@latest add ${registryUrl}/r/${name}.json`,
+    npm: `npx shadcn@latest add ${registryUrl}/r/${name}.json`,
+    yarn: `yarn shadcn@latest add ${registryUrl}/r/${name}.json`,
+    bun: `bunx --bun shadcn@latest add ${registryUrl}/r/${name}.json`
   }
 
   return (

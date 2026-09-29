@@ -24,12 +24,16 @@ export const getComponentsByNames = (names: string[]): RegistryItem[] => {
   return names.map(name => componentsMap.get(name)).filter((comp): comp is RegistryItem => comp !== undefined)
 }
 
-// Read source files straight from disk. Previously this made an HTTP request to our own
+// Read source files straight from disk. Previously this made an HTTP request to a public
 // /api/get-file-content route for every file, which broke whenever NEXT_PUBLIC_APP_URL was
-// unset/wrong, flooded the server on large categories, and crashed the page on any failure.
+// unset/wrong, flooded the server on large categories, crashed the page on any failure, and
+// exposed the whole src/ tree over HTTP for no reason. That route has since been removed.
 async function getFileContent(file: NonNullable<RegistryItem['files']>[number]): Promise<string> {
   try {
-    return await fs.readFile(path.join(process.cwd(), file.path), 'utf-8')
+    // file.path always comes from our own registry.json (files under src/), never from user
+    // input, so this is safe. The ignore comment stops Turbopack from tracing/bundling the
+    // whole project just because it sees a dynamic fs read.
+    return await fs.readFile(path.join(/* turbopackIgnore: true */ process.cwd(), file.path), 'utf-8')
   } catch (error) {
     console.error(`Error reading file content for ${file.path}:`, error)
 

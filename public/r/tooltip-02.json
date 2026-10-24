@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-02",
-  "type": "registry:component",
   "title": "Tooltip 2",
   "description": "A light-themed tooltip with custom background and text colors",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tooltip/tooltip-02.tsx",
-      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipLightDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Light\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='bg-neutral-200 text-neutral-950 dark:bg-neutral-50 [&_svg]:bg-neutral-200 [&_svg]:fill-neutral-200 dark:[&_svg]:bg-neutral-50 dark:[&_svg]:fill-neutral-50'>\n        <p>This tooltip will be always light</p>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipLightDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\r\n\r\nconst TooltipLightDemo = () => {\r\n  return (\r\n    <Tooltip>\r\n      <TooltipTrigger asChild>\r\n        <Button variant='outline' size='sm'>\r\n          Light\r\n        </Button>\r\n      </TooltipTrigger>\r\n      <TooltipContent className='bg-neutral-200 text-neutral-950 dark:bg-neutral-50 [&_svg]:bg-neutral-200 [&_svg]:fill-neutral-200 dark:[&_svg]:bg-neutral-50 dark:[&_svg]:fill-neutral-50'>\r\n        <p>This tooltip will be always light</p>\r\n      </TooltipContent>\r\n    </Tooltip>\r\n  )\r\n}\r\n\r\nexport default TooltipLightDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tooltip/tooltip-02.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

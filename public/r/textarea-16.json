@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-16",
-  "type": "registry:component",
   "title": "Textarea 16",
   "description": "A textarea with separate submit button below for form submission",
   "registryDependencies": [
@@ -12,9 +11,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/textarea/textarea-16.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Button } from '@/components/ui/button'\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with button</Label>\n      <Textarea id={id} placeholder='Type your feedback here' />\n      <Button size='sm'>Submit Feedback</Button>\n    </div>\n  )\n}\n\nexport default TextareaWithButtonDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Label } from '@/components/ui/label'\r\nimport { Textarea } from '@/components/ui/textarea'\r\n\r\nconst TextareaWithButtonDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Textarea with button</Label>\r\n      <Textarea id={id} placeholder='Type your feedback here' />\r\n      <Button size='sm'>Submit Feedback</Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TextareaWithButtonDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/textarea/textarea-16.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

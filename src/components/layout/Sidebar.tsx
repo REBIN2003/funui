@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 
 // Third-party Imports
 import {
+  Atom,
   BotIcon,
   ChevronRightIcon,
   Component,
@@ -204,21 +205,9 @@ const AppSidebar = () => {
                 <LayoutPanelTop className='!size-5' />
                 Blocks
               </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem href='https://shadcnstudio.com/templates' openInNewTab>
-                <PanelsLeftBottomIcon className='!size-5' />
-                Templates
-              </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem href='https://shadcnstudio.com/figma' openInNewTab>
-                <Figma className='!size-5' />
-                Figma UI Kit
-              </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem href='https://shadcnstudio.com/mcp' openInNewTab>
-                <BotIcon className='!size-5' />
-                shadcn/studio MCP
-              </CustomSidebarMenuItem>
-              <CustomSidebarMenuItem href='https://shadcnstudio.com/figma-plugin' openInNewTab>
-                <Figma className='!size-5' />
-                Figma to Code (Figma Plugin)
+              <CustomSidebarMenuItem href='/react-library'>
+                <Atom className='!size-5' />
+                React Library
               </CustomSidebarMenuItem>
             </SidebarMenu>
           </SidebarGroup>

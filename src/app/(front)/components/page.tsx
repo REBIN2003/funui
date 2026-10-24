@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 
 // Config Imports
 import { categories } from '@/config/components'
+import { siteConfig } from '@/config/site'
 
 // SVG Imports
 import MoreComponents from '@/assets/svg/MoreComponents'
@@ -17,8 +18,8 @@ export const metadata: Metadata = {
     description:
       'An open-source collection of copy-and-paste Shadcn Components designed to accelerate your project development.',
     type: 'website',
-    siteName: 'Shadcn Studio',
-    url: `${process.env.NEXT_PUBLIC_APP_URL}/components`,
+    siteName: siteConfig.name,
+    url: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/components`,
     images: [
       {
         url: 'https://cdn.themeselection.com/ts-assets/shadcn-studio/free/marketing/shadcn-studio-smm-banner.png',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
       'An open-source collection of copy-and-paste Shadcn Components designed to accelerate your project development.'
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/components`
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/components`
   }
 }
 

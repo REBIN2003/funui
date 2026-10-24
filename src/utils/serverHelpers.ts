@@ -16,7 +16,7 @@ import type { FileTree } from '@/types/components'
 export const getSettingsFromCookie = async (): Promise<ModeSettings> => {
   try {
     const cookieStore = await cookies()
-    const settings = cookieStore.get('shadcn-studio-mode')
+    const settings = cookieStore.get('funui-studio-mode')
 
     if (!settings?.value) {
       return {

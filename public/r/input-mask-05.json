@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-mask-05",
-  "type": "registry:component",
   "title": "Input Mask 5",
   "description": "A credit card CVC input field with secure formatting and length validation",
   "dependencies": [
@@ -17,9 +16,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input-mask/input-mask-05.tsx",
-      "content": "'use client'\n\nimport { useId } from 'react'\n\nimport { usePaymentInputs } from 'react-payment-inputs'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputCVCCodeDemo = () => {\n  const id = useId()\n  const { getCVCProps } = usePaymentInputs()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>CVC code</Label>\n      <Input {...getCVCProps()} id={id} />\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://github.com/medipass/react-payment-inputs'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          React Payment Inputs\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputCVCCodeDemo\n",
+      "content": "'use client'\r\n\r\nimport { useId } from 'react'\r\n\r\nimport { usePaymentInputs } from 'react-payment-inputs'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputCVCCodeDemo = () => {\r\n  const id = useId()\r\n  const { getCVCProps } = usePaymentInputs()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>CVC code</Label>\r\n      <Input {...getCVCProps()} id={id} />\r\n      <p className='text-muted-foreground text-xs'>\r\n        Built with{' '}\r\n        <a\r\n          className='hover:text-foreground underline'\r\n          href='https://github.com/medipass/react-payment-inputs'\r\n          target='_blank'\r\n          rel='noopener noreferrer'\r\n        >\r\n          React Payment Inputs\r\n        </a>\r\n      </p>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputCVCCodeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input-mask/input-mask-05.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

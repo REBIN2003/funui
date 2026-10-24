@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "date-picker-06",
-  "type": "registry:component",
   "title": "Date Picker 6",
   "description": "Date range picker with compact date formatting using little-date library",
   "dependencies": [
@@ -17,9 +16,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/date-picker/date-picker-06.tsx",
-      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { formatDateRange } from 'little-date'\nimport { ChevronDownIcon } from 'lucide-react'\nimport { type DateRange } from 'react-day-picker'\n\nimport { Button } from '@/components/ui/button'\nimport { Calendar } from '@/components/ui/calendar'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n\nconst DatePickerWithShortDateDisplayDemo = () => {\n  const [range, setRange] = useState<DateRange | undefined>({\n    from: new Date(2025, 10, 20),\n    to: new Date(2025, 10, 24)\n  })\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor='dates' className='px-1'>\n        Date picker with short date\n      </Label>\n      <Popover>\n        <PopoverTrigger asChild>\n          <Button variant='outline' id='dates' className='w-full justify-between font-normal'>\n            {range?.from && range?.to\n              ? formatDateRange(range.from, range.to, {\n                  includeTime: false\n                })\n              : 'Pick a date'}\n            <ChevronDownIcon />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className='w-auto overflow-hidden p-0' align='start'>\n          <Calendar\n            mode='range'\n            selected={range}\n            onSelect={range => {\n              setRange(range)\n            }}\n          />\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n\nexport default DatePickerWithShortDateDisplayDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\n\r\nimport { formatDateRange } from 'little-date'\r\nimport { ChevronDownIcon } from 'lucide-react'\r\nimport { type DateRange } from 'react-day-picker'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Calendar } from '@/components/ui/calendar'\r\nimport { Label } from '@/components/ui/label'\r\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\r\n\r\nconst DatePickerWithShortDateDisplayDemo = () => {\r\n  const [range, setRange] = useState<DateRange | undefined>({\r\n    from: new Date(2025, 10, 20),\r\n    to: new Date(2025, 10, 24)\r\n  })\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor='dates' className='px-1'>\r\n        Date picker with short date\r\n      </Label>\r\n      <Popover>\r\n        <PopoverTrigger asChild>\r\n          <Button variant='outline' id='dates' className='w-full justify-between font-normal'>\r\n            {range?.from && range?.to\r\n              ? formatDateRange(range.from, range.to, {\r\n                  includeTime: false\r\n                })\r\n              : 'Pick a date'}\r\n            <ChevronDownIcon />\r\n          </Button>\r\n        </PopoverTrigger>\r\n        <PopoverContent className='w-auto overflow-hidden p-0' align='start'>\r\n          <Calendar\r\n            mode='range'\r\n            selected={range}\r\n            onSelect={range => {\r\n              setRange(range)\r\n            }}\r\n          />\r\n        </PopoverContent>\r\n      </Popover>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default DatePickerWithShortDateDisplayDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/date-picker/date-picker-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

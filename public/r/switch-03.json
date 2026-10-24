@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch-03",
-  "type": "registry:component",
   "title": "Switch 3",
   "description": "A mini-sized switch with border styling for compact interface layouts",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/switch/switch-03.tsx",
-      "content": "import { Switch } from '@/components/ui/switch'\n\nconst SwitchMiniDemo = () => {\n  return (\n    <Switch\n      aria-label='Mini switch'\n      className='[&_span]:border-input h-3 border-none [&_span]:size-4.5 [&_span]:border'\n    />\n  )\n}\n\nexport default SwitchMiniDemo\n",
+      "content": "import { Switch } from '@/components/ui/switch'\r\n\r\nconst SwitchMiniDemo = () => {\r\n  return (\r\n    <Switch\r\n      aria-label='Mini switch'\r\n      className='[&_span]:border-input h-3 border-none [&_span]:size-4.5 [&_span]:border'\r\n    />\r\n  )\r\n}\r\n\r\nexport default SwitchMiniDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/switch/switch-03.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

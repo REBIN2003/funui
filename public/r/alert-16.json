@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-16",
-  "type": "registry:component",
   "title": "Alert 16",
   "description": "Minimal alert without icon displaying simple message text only.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-16.tsx",
-      "content": "import { Alert, AlertTitle } from '@/components/ui/alert'\n\nconst AlertWithoutIconDemo = () => {\n  return (\n    <Alert>\n      <AlertTitle>New message!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertWithoutIconDemo\n",
+      "content": "import { Alert, AlertTitle } from '@/components/ui/alert'\r\n\r\nconst AlertWithoutIconDemo = () => {\r\n  return (\r\n    <Alert>\r\n      <AlertTitle>New message!</AlertTitle>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertWithoutIconDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-16.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-20",
-  "type": "registry:component",
   "title": "Textarea 20",
   "description": "A read-only textarea with muted background styling for displaying non-editable content",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/textarea/textarea-20.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaReadOnlyDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Read only textarea</Label>\n      <Textarea\n        className='read-only:bg-muted'\n        defaultValue='Read only text'\n        placeholder='Type your feedback here'\n        id={id}\n        readOnly\n      />\n    </div>\n  )\n}\n\nexport default TextareaReadOnlyDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport { Textarea } from '@/components/ui/textarea'\r\n\r\nconst TextareaReadOnlyDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Read only textarea</Label>\r\n      <Textarea\r\n        className='read-only:bg-muted'\r\n        defaultValue='Read only text'\r\n        placeholder='Type your feedback here'\r\n        id={id}\r\n        readOnly\r\n      />\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TextareaReadOnlyDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/textarea/textarea-20.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

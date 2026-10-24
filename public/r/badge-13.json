@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-13",
-  "type": "registry:component",
   "title": "Badge 13",
   "description": "Selectable badge with checkbox functionality for interactive selection",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-13.tsx",
-      "content": "'use client'\n\nimport { useState, useId } from 'react'\n\nimport { CheckCircleIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Checkbox } from '@/components/ui/checkbox'\n\nconst BadgeSelectableDemo = () => {\n  const [selected, setSelected] = useState(false)\n\n  const id = useId()\n\n  return (\n    <Badge\n      variant={selected ? 'secondary' : 'outline'}\n      className='has-focus-visible:border-ring/50 has-focus-visible:ring-ring/50 relative cursor-pointer rounded-sm outline-none has-focus-visible:ring-2'\n    >\n      <Checkbox\n        id={id}\n        className='peer sr-only after:absolute after:inset-0'\n        checked={selected}\n        onCheckedChange={checked => setSelected(!!checked)}\n      />\n      <CheckCircleIcon\n        className='hidden size-3 text-green-600 peer-data-[state=checked]:block dark:text-green-400'\n        aria-hidden='true'\n      />\n      <label htmlFor={id} className='cursor-pointer select-none after:absolute after:inset-0'>\n        {selected ? 'Selected' : 'Selectable'}\n      </label>\n    </Badge>\n  )\n}\n\nexport default BadgeSelectableDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState, useId } from 'react'\r\n\r\nimport { CheckCircleIcon } from 'lucide-react'\r\n\r\nimport { Badge } from '@/components/ui/badge'\r\nimport { Checkbox } from '@/components/ui/checkbox'\r\n\r\nconst BadgeSelectableDemo = () => {\r\n  const [selected, setSelected] = useState(false)\r\n\r\n  const id = useId()\r\n\r\n  return (\r\n    <Badge\r\n      variant={selected ? 'secondary' : 'outline'}\r\n      className='has-focus-visible:border-ring/50 has-focus-visible:ring-ring/50 relative cursor-pointer rounded-sm outline-none has-focus-visible:ring-2'\r\n    >\r\n      <Checkbox\r\n        id={id}\r\n        className='peer sr-only after:absolute after:inset-0'\r\n        checked={selected}\r\n        onCheckedChange={checked => setSelected(!!checked)}\r\n      />\r\n      <CheckCircleIcon\r\n        className='hidden size-3 text-green-600 peer-data-[state=checked]:block dark:text-green-400'\r\n        aria-hidden='true'\r\n      />\r\n      <label htmlFor={id} className='cursor-pointer select-none after:absolute after:inset-0'>\r\n        {selected ? 'Selected' : 'Selectable'}\r\n      </label>\r\n    </Badge>\r\n  )\r\n}\r\n\r\nexport default BadgeSelectableDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-13.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-09",
-  "type": "registry:component",
   "title": "Tooltip 9",
   "description": "A tooltip with badge indicator for pricing and status information",
   "registryDependencies": [
@@ -12,9 +11,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tooltip/tooltip-09.tsx",
-      "content": "import { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipBadgeDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Badge\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent>\n        <div className='flex items-center gap-2'>\n          <p>Team plan: $99/month per user.</p>\n          <Badge variant='secondary' className='px-1.5 py-px'>\n            Trending\n          </Badge>\n        </div>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipBadgeDemo\n",
+      "content": "import { Badge } from '@/components/ui/badge'\r\nimport { Button } from '@/components/ui/button'\r\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\r\n\r\nconst TooltipBadgeDemo = () => {\r\n  return (\r\n    <Tooltip>\r\n      <TooltipTrigger asChild>\r\n        <Button variant='outline' size='sm'>\r\n          Badge\r\n        </Button>\r\n      </TooltipTrigger>\r\n      <TooltipContent>\r\n        <div className='flex items-center gap-2'>\r\n          <p>Team plan: $99/month per user.</p>\r\n          <Badge variant='secondary' className='px-1.5 py-px'>\r\n            Trending\r\n          </Badge>\r\n        </div>\r\n      </TooltipContent>\r\n    </Tooltip>\r\n  )\r\n}\r\n\r\nexport default TooltipBadgeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tooltip/tooltip-09.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

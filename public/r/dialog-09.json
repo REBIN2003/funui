@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dialog-09",
-  "type": "registry:component",
   "title": "Dialog 9",
   "description": "Subscription dialog with input field and subscribe button",
   "registryDependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/dialog/dialog-09.tsx",
-      "content": "import { Button } from '@/components/ui/button'\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger\n} from '@/components/ui/dialog'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst DialogSubscribeDemo = () => {\n  return (\n    <Dialog>\n      <DialogTrigger asChild>\n        <Button variant='outline'>Subscribe</Button>\n      </DialogTrigger>\n      <DialogContent className='sm:max-w-lg'>\n        <DialogHeader className='text-center'>\n          <DialogTitle className='text-xl'>Subscribe blog for latest updates</DialogTitle>\n          <DialogDescription className='text-base'>\n            Subscribe to our blog to stay updated with the latest posts and news. Simply enter your email address and\n            click &apos;Subscribe&apos; to receive notifications.\n          </DialogDescription>\n        </DialogHeader>\n        <form className='flex gap-4'>\n          <div className='grid grow-1 gap-3'>\n            <Label htmlFor='email'>Email</Label>\n            <Input type='email' id='email' name='email' placeholder='example@gmail.com' required />\n          </div>\n          <Button type='submit' className='self-end'>\n            Subscribe\n          </Button>\n        </form>\n      </DialogContent>\n    </Dialog>\n  )\n}\n\nexport default DialogSubscribeDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\nimport {\r\n  Dialog,\r\n  DialogContent,\r\n  DialogDescription,\r\n  DialogHeader,\r\n  DialogTitle,\r\n  DialogTrigger\r\n} from '@/components/ui/dialog'\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst DialogSubscribeDemo = () => {\r\n  return (\r\n    <Dialog>\r\n      <DialogTrigger asChild>\r\n        <Button variant='outline'>Subscribe</Button>\r\n      </DialogTrigger>\r\n      <DialogContent className='sm:max-w-lg'>\r\n        <DialogHeader className='text-center'>\r\n          <DialogTitle className='text-xl'>Subscribe blog for latest updates</DialogTitle>\r\n          <DialogDescription className='text-base'>\r\n            Subscribe to our blog to stay updated with the latest posts and news. Simply enter your email address and\r\n            click &apos;Subscribe&apos; to receive notifications.\r\n          </DialogDescription>\r\n        </DialogHeader>\r\n        <form className='flex gap-4'>\r\n          <div className='grid grow-1 gap-3'>\r\n            <Label htmlFor='email'>Email</Label>\r\n            <Input type='email' id='email' name='email' placeholder='example@gmail.com' required />\r\n          </div>\r\n          <Button type='submit' className='self-end'>\r\n            Subscribe\r\n          </Button>\r\n        </form>\r\n      </DialogContent>\r\n    </Dialog>\r\n  )\r\n}\r\n\r\nexport default DialogSubscribeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/dialog/dialog-09.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-04",
-  "type": "registry:component",
   "title": "Badge 4",
   "description": "Outline variant badge with bordered styling for subtle emphasis",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-04.tsx",
-      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeOutlineDemo = () => {\n  return <Badge variant='outline'>Outline</Badge>\n}\n\nexport default BadgeOutlineDemo\n",
+      "content": "import { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgeOutlineDemo = () => {\r\n  return <Badge variant='outline'>Outline</Badge>\r\n}\r\n\r\nexport default BadgeOutlineDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-04.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

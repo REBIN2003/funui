@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-26",
-  "type": "registry:component",
   "title": "Alert 26",
   "description": "Solid info alert with full primary background for prominent informational messages.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-26.tsx",
-      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSolidDemo = () => {\n  return (\n    <Alert className='bg-primary text-primary-foreground border-none'>\n      <CircleAlertIcon />\n      <AlertTitle>Editing your profile</AlertTitle>\n      <AlertDescription className='text-primary-foreground/80'>\n        Changes won&apos;t be saved until you click &quot;Update.&quot;\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSolidDemo\n",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertSolidDemo = () => {\r\n  return (\r\n    <Alert className='bg-primary text-primary-foreground border-none'>\r\n      <CircleAlertIcon />\r\n      <AlertTitle>Editing your profile</AlertTitle>\r\n      <AlertDescription className='text-primary-foreground/80'>\r\n        Changes won&apos;t be saved until you click &quot;Update.&quot;\r\n      </AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertSolidDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-26.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

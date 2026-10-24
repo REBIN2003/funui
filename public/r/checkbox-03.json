@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-03",
-  "type": "registry:component",
   "title": "Checkbox 3",
   "description": "Checkbox with dashed border styling for visual distinction",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/checkbox/checkbox-03.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst CheckboxDashedDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-center gap-2'>\n      <Checkbox id={id} className='border-primary border-dashed' />\n      <Label htmlFor={id}>Accept terms and conditions</Label>\n    </div>\n  )\n}\n\nexport default CheckboxDashedDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Checkbox } from '@/components/ui/checkbox'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst CheckboxDashedDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='flex items-center gap-2'>\r\n      <Checkbox id={id} className='border-primary border-dashed' />\r\n      <Label htmlFor={id}>Accept terms and conditions</Label>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CheckboxDashedDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/checkbox/checkbox-03.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

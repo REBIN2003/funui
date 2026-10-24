@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tabs-01",
-  "type": "registry:component",
   "title": "Tabs 1",
   "description": "Basic tabs component with default styling for content organization and navigation",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tabs/tabs-01.tsx",
-      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\n\nconst tabs = [\n  {\n    name: 'Explore',\n    value: 'explore',\n    content: (\n      <>\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\n        curated just for you. Start exploring and let your curiosity lead the way!\n      </>\n    )\n  },\n  {\n    name: 'Favorites',\n    value: 'favorites',\n    content: (\n      <>\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\n        collections, and moments you love, any time you want a little inspiration.\n      </>\n    )\n  },\n  {\n    name: 'Surprise Me',\n    value: 'surprise',\n    content: (\n      <>\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\n      </>\n    )\n  }\n]\n\nconst TabsDemo = () => {\n  return (\n    <div className='w-full max-w-md'>\n      <Tabs defaultValue='explore'>\n        <TabsList>\n          {tabs.map(tab => (\n            <TabsTrigger key={tab.value} value={tab.value}>\n              {tab.name}\n            </TabsTrigger>\n          ))}\n        </TabsList>\n\n        {tabs.map(tab => (\n          <TabsContent key={tab.value} value={tab.value}>\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\n          </TabsContent>\n        ))}\n      </Tabs>\n    </div>\n  )\n}\n\nexport default TabsDemo\n",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'\r\n\r\nconst tabs = [\r\n  {\r\n    name: 'Explore',\r\n    value: 'explore',\r\n    content: (\r\n      <>\r\n        Discover <span className='text-foreground font-semibold'>fresh ideas</span>, trending topics, and hidden gems\r\n        curated just for you. Start exploring and let your curiosity lead the way!\r\n      </>\r\n    )\r\n  },\r\n  {\r\n    name: 'Favorites',\r\n    value: 'favorites',\r\n    content: (\r\n      <>\r\n        All your <span className='text-foreground font-semibold'>favorites</span> are saved here. Revisit articles,\r\n        collections, and moments you love, any time you want a little inspiration.\r\n      </>\r\n    )\r\n  },\r\n  {\r\n    name: 'Surprise Me',\r\n    value: 'surprise',\r\n    content: (\r\n      <>\r\n        <span className='text-foreground font-semibold'>Surprise!</span> Here&apos;s something unexpected—a fun fact, a\r\n        quirky tip, or a daily challenge. Come back for a new surprise every day!\r\n      </>\r\n    )\r\n  }\r\n]\r\n\r\nconst TabsDemo = () => {\r\n  return (\r\n    <div className='w-full max-w-md'>\r\n      <Tabs defaultValue='explore'>\r\n        <TabsList>\r\n          {tabs.map(tab => (\r\n            <TabsTrigger key={tab.value} value={tab.value}>\r\n              {tab.name}\r\n            </TabsTrigger>\r\n          ))}\r\n        </TabsList>\r\n\r\n        {tabs.map(tab => (\r\n          <TabsContent key={tab.value} value={tab.value}>\r\n            <p className='text-muted-foreground text-sm'>{tab.content}</p>\r\n          </TabsContent>\r\n        ))}\r\n      </Tabs>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TabsDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tabs/tabs-01.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

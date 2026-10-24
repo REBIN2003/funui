@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-34",
-  "type": "registry:component",
   "title": "Input 34",
   "description": "Input field with character limit counter showing current count out of maximum allowed",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-34.tsx",
-      "content": "'use client'\n\nimport { useId, useState, type ChangeEvent } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst maxLength = 50\nconst initialValue = ''\n\nconst InputCharacterLimitDemo = () => {\n  const [value, setValue] = useState(initialValue)\n  const [characterCount, setCharacterCount] = useState(initialValue.length)\n\n  const id = useId()\n\n  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {\n    if (e.target.value.length <= maxLength) {\n      setValue(e.target.value)\n      setCharacterCount(e.target.value.length)\n    }\n  }\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with character limit</Label>\n      <div className='relative'>\n        <Input\n          id={id}\n          type='text'\n          placeholder='Username'\n          value={value}\n          maxLength={maxLength}\n          onChange={handleChange}\n          className='peer pr-14'\n        />\n        <span className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 text-xs tabular-nums peer-disabled:opacity-50'>\n          {characterCount}/{maxLength}\n        </span>\n      </div>\n    </div>\n  )\n}\n\nexport default InputCharacterLimitDemo\n",
+      "content": "'use client'\r\n\r\nimport { useId, useState, type ChangeEvent } from 'react'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst maxLength = 50\r\nconst initialValue = ''\r\n\r\nconst InputCharacterLimitDemo = () => {\r\n  const [value, setValue] = useState(initialValue)\r\n  const [characterCount, setCharacterCount] = useState(initialValue.length)\r\n\r\n  const id = useId()\r\n\r\n  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {\r\n    if (e.target.value.length <= maxLength) {\r\n      setValue(e.target.value)\r\n      setCharacterCount(e.target.value.length)\r\n    }\r\n  }\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Input with character limit</Label>\r\n      <div className='relative'>\r\n        <Input\r\n          id={id}\r\n          type='text'\r\n          placeholder='Username'\r\n          value={value}\r\n          maxLength={maxLength}\r\n          onChange={handleChange}\r\n          className='peer pr-14'\r\n        />\r\n        <span className='text-muted-foreground pointer-events-none absolute inset-y-0 right-0 flex items-center justify-center pr-3 text-xs tabular-nums peer-disabled:opacity-50'>\r\n          {characterCount}/{maxLength}\r\n        </span>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputCharacterLimitDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-34.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

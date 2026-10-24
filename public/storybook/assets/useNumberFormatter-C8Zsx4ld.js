@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-2s6bX4vc.js";import{i as t}from"./iframe-VXz9ALkE.js";import{n,t as r}from"./I18nProvider-CDFPgvA3.js";import{n as i,t as a}from"./NumberFormatter-JilnVo-0.js";function o(e={}){let{locale:t}=r();return(0,s.useMemo)(()=>new a(t,e),[t,e])}var s;function c(){return(c=e((()=>{n(),i(),s=t()})))()}export{c as n,o as t};

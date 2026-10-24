@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-18",
-  "type": "registry:component",
   "title": "Alert 18",
   "description": "Outline info alert with blue border and text styling for informational messages.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-18.tsx",
-      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertOutlineInfoDemo = () => {\n  return (\n    <Alert className='border-sky-600 text-sky-600 dark:border-sky-400 dark:text-sky-400'>\n      <CircleAlertIcon />\n      <AlertTitle>Verify your email to activate your account</AlertTitle>\n      <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>\n        We&apos;ve sent a confirmation link to your inbox. Check your email to complete the sign-up.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertOutlineInfoDemo\n",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertOutlineInfoDemo = () => {\r\n  return (\r\n    <Alert className='border-sky-600 text-sky-600 dark:border-sky-400 dark:text-sky-400'>\r\n      <CircleAlertIcon />\r\n      <AlertTitle>Verify your email to activate your account</AlertTitle>\r\n      <AlertDescription className='text-sky-600/80 dark:text-sky-400/80'>\r\n        We&apos;ve sent a confirmation link to your inbox. Check your email to complete the sign-up.\r\n      </AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertOutlineInfoDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-18.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

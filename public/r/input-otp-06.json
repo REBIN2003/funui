@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-otp-06",
-  "type": "registry:component",
   "title": "Input OTP 6",
   "description": "A 4-digit OTP input field with filled background styling and muted appearance",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input-otp/input-otp-06.tsx",
-      "content": "import { useId } from 'react'\n\nimport { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp'\nimport { Label } from '@/components/ui/label'\n\nconst InputOTPFilledDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='space-y-3'>\n      <Label htmlFor={id}>Input OTP filled</Label>\n      <InputOTP id={id} maxLength={4}>\n        <InputOTPGroup className='*:data-[slot=input-otp-slot]:bg-muted gap-2 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:border-transparent *:data-[slot=input-otp-slot]:shadow-none'>\n          <InputOTPSlot index={0} />\n          <InputOTPSlot index={1} />\n          <InputOTPSlot index={2} />\n          <InputOTPSlot index={3} />\n        </InputOTPGroup>\n      </InputOTP>\n    </div>\n  )\n}\n\nexport default InputOTPFilledDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputOTPFilledDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='space-y-3'>\r\n      <Label htmlFor={id}>Input OTP filled</Label>\r\n      <InputOTP id={id} maxLength={4}>\r\n        <InputOTPGroup className='*:data-[slot=input-otp-slot]:bg-muted gap-2 *:data-[slot=input-otp-slot]:rounded-md *:data-[slot=input-otp-slot]:border *:data-[slot=input-otp-slot]:border-transparent *:data-[slot=input-otp-slot]:shadow-none'>\r\n          <InputOTPSlot index={0} />\r\n          <InputOTPSlot index={1} />\r\n          <InputOTPSlot index={2} />\r\n          <InputOTPSlot index={3} />\r\n        </InputOTPGroup>\r\n      </InputOTP>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputOTPFilledDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input-otp/input-otp-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

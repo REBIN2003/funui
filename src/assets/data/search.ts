@@ -46,6 +46,11 @@ export const searchData: SearchData[] = [
         icon: File,
         name: 'Blocks',
         href: '/blocks'
+      },
+      {
+        icon: File,
+        name: 'React Library',
+        href: '/react-library'
       }
     ]
   },
@@ -81,3 +86,4 @@ export const searchData: SearchData[] = [
     }))
   }))
 ]
+

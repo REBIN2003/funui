@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-04",
-  "type": "registry:component",
   "title": "Tooltip 4",
   "description": "An error-styled tooltip with destructive color scheme for warnings",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tooltip/tooltip-04.tsx",
-      "content": "import { Button } from '@/components/ui/button'\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\n\nconst TooltipErrorDemo = () => {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant='outline' size='sm'>\n          Error\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className='bg-destructive [&_svg]:bg-destructive [&_svg]:fill-destructive text-white'>\n        <p>This is an error tooltip</p>\n      </TooltipContent>\n    </Tooltip>\n  )\n}\n\nexport default TooltipErrorDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\nimport { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'\r\n\r\nconst TooltipErrorDemo = () => {\r\n  return (\r\n    <Tooltip>\r\n      <TooltipTrigger asChild>\r\n        <Button variant='outline' size='sm'>\r\n          Error\r\n        </Button>\r\n      </TooltipTrigger>\r\n      <TooltipContent className='bg-destructive [&_svg]:bg-destructive [&_svg]:fill-destructive text-white'>\r\n        <p>This is an error tooltip</p>\r\n      </TooltipContent>\r\n    </Tooltip>\r\n  )\r\n}\r\n\r\nexport default TooltipErrorDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tooltip/tooltip-04.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

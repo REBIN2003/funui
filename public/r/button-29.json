@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-29",
-  "type": "registry:component",
   "title": "Button 29",
   "description": "Social media icon buttons for Google, X/Twitter, Facebook, and GitHub",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-29.tsx",
-      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonSocialIconsDemo = () => {\n  return (\n    <div className='flex flex-wrap items-center justify-center gap-4'>\n      <Button variant='outline' size='icon'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/google-icon.png?width=20&height=20&format=auto'\n          alt='Google Icon'\n          className='size-5'\n        />\n      </Button>\n      <Button variant='outline' size='icon'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/twitter-icon.png?width=20&height=20&format=auto'\n          alt='X Icon'\n          className='size-5 dark:invert'\n        />\n      </Button>\n      <Button variant='outline' size='icon'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/facebook-icon.png?width=20&height=20&format=auto'\n          alt='Facebook Icon'\n          className='size-5'\n        />\n      </Button>\n      <Button variant='outline' size='icon'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/github-icon.png?width=20&height=20&format=auto'\n          alt='GitHub Icon'\n          className='size-5 dark:invert'\n        />\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonSocialIconsDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\n\r\nconst ButtonSocialIconsDemo = () => {\r\n  return (\r\n    <div className='flex flex-wrap items-center justify-center gap-4'>\r\n      <Button variant='outline' size='icon'>\r\n        <img\r\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/google-icon.png?width=20&height=20&format=auto'\r\n          alt='Google Icon'\r\n          className='size-5'\r\n        />\r\n      </Button>\r\n      <Button variant='outline' size='icon'>\r\n        <img\r\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/twitter-icon.png?width=20&height=20&format=auto'\r\n          alt='X Icon'\r\n          className='size-5 dark:invert'\r\n        />\r\n      </Button>\r\n      <Button variant='outline' size='icon'>\r\n        <img\r\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/facebook-icon.png?width=20&height=20&format=auto'\r\n          alt='Facebook Icon'\r\n          className='size-5'\r\n        />\r\n      </Button>\r\n      <Button variant='outline' size='icon'>\r\n        <img\r\n          src='https://cdn.shadcnstudio.com/ss-assets/brand-logo/github-icon.png?width=20&height=20&format=auto'\r\n          alt='GitHub Icon'\r\n          className='size-5 dark:invert'\r\n        />\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default ButtonSocialIconsDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-29.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

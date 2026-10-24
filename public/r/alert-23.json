@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-23",
-  "type": "registry:component",
   "title": "Alert 23",
   "description": "Soft success alert with green background and subtle styling for success messages.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-23.tsx",
-      "content": "import { CheckCheckIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSoftSuccessDemo = () => {\n  return (\n    <Alert className='border-none bg-green-600/10 text-green-600 dark:bg-green-400/10 dark:text-green-400'>\n      <CheckCheckIcon />\n      <AlertTitle>File uploaded successfully</AlertTitle>\n      <AlertDescription className='text-green-600/80 dark:text-green-400/80'>\n        Your document has been saved and is now available in your files.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSoftSuccessDemo\n",
+      "content": "import { CheckCheckIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertSoftSuccessDemo = () => {\r\n  return (\r\n    <Alert className='border-none bg-green-600/10 text-green-600 dark:bg-green-400/10 dark:text-green-400'>\r\n      <CheckCheckIcon />\r\n      <AlertTitle>File uploaded successfully</AlertTitle>\r\n      <AlertDescription className='text-green-600/80 dark:text-green-400/80'>\r\n        Your document has been saved and is now available in your files.\r\n      </AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertSoftSuccessDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-23.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

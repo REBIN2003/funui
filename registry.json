@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "shadcn/studio",
-  "homepage": "https://shadcnstudio.com",
+  "name": "funui-studio",
+  "homepage": "https://funui1.netlify.app",
   "items": [
     {
       "name": "accordion-01",

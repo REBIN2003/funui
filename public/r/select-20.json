@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-20",
-  "type": "registry:component",
   "title": "Select 20",
   "description": "A custom select dropdown with disabled individual options",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/select/select-20.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectDisabledOptionDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Disabled options select</Label>\n      <Select defaultValue='apple'>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select a fruit' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>Fruits</SelectLabel>\n            <SelectItem value='apple'>Apple</SelectItem>\n            <SelectItem value='banana' disabled>\n              Banana\n            </SelectItem>\n            <SelectItem value='blueberry'>Blueberry</SelectItem>\n            <SelectItem value='grapes' disabled>\n              Grapes\n            </SelectItem>\n            <SelectItem value='pineapple'>Pineapple</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectDisabledOptionDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport {\r\n  Select,\r\n  SelectContent,\r\n  SelectGroup,\r\n  SelectItem,\r\n  SelectLabel,\r\n  SelectTrigger,\r\n  SelectValue\r\n} from '@/components/ui/select'\r\n\r\nconst SelectDisabledOptionDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Disabled options select</Label>\r\n      <Select defaultValue='apple'>\r\n        <SelectTrigger id={id} className='w-full'>\r\n          <SelectValue placeholder='Select a fruit' />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          <SelectGroup>\r\n            <SelectLabel>Fruits</SelectLabel>\r\n            <SelectItem value='apple'>Apple</SelectItem>\r\n            <SelectItem value='banana' disabled>\r\n              Banana\r\n            </SelectItem>\r\n            <SelectItem value='blueberry'>Blueberry</SelectItem>\r\n            <SelectItem value='grapes' disabled>\r\n              Grapes\r\n            </SelectItem>\r\n            <SelectItem value='pineapple'>Pineapple</SelectItem>\r\n          </SelectGroup>\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SelectDisabledOptionDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/select/select-20.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

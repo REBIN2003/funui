@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card-14",
-  "type": "registry:component",
   "title": "Card 14",
   "description": "Dismissible action card with close button and call-to-action content",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/card/card-14.tsx",
-      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { XIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'\n\nconst CardActionDemo = () => {\n  const [isActive, setIsActive] = useState(true)\n\n  if (!isActive) return null\n\n  return (\n    <Card className='relative max-w-lg shadow-none'>\n      <Button\n        variant='ghost'\n        size='icon'\n        onClick={() => setIsActive(false)}\n        className='absolute top-2 right-2 rounded-full'\n      >\n        <XIcon />\n        <span className='sr-only'>Close</span>\n      </Button>\n      <CardHeader>\n        <CardTitle className='text-center'>Have a project in mind</CardTitle>\n      </CardHeader>\n      <CardContent className='flex flex-col gap-4 text-center'>\n        <p>Let&apos;s discuss! Our Assistant team is excited to hear about your projects, ideas and questions. </p>\n        <Button>Contact Our Team</Button>\n      </CardContent>\n    </Card>\n  )\n}\n\nexport default CardActionDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\n\r\nimport { XIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'\r\n\r\nconst CardActionDemo = () => {\r\n  const [isActive, setIsActive] = useState(true)\r\n\r\n  if (!isActive) return null\r\n\r\n  return (\r\n    <Card className='relative max-w-lg shadow-none'>\r\n      <Button\r\n        variant='ghost'\r\n        size='icon'\r\n        onClick={() => setIsActive(false)}\r\n        className='absolute top-2 right-2 rounded-full'\r\n      >\r\n        <XIcon />\r\n        <span className='sr-only'>Close</span>\r\n      </Button>\r\n      <CardHeader>\r\n        <CardTitle className='text-center'>Have a project in mind</CardTitle>\r\n      </CardHeader>\r\n      <CardContent className='flex flex-col gap-4 text-center'>\r\n        <p>Let&apos;s discuss! Our Assistant team is excited to hear about your projects, ideas and questions. </p>\r\n        <Button>Contact Our Team</Button>\r\n      </CardContent>\r\n    </Card>\r\n  )\r\n}\r\n\r\nexport default CardActionDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/card/card-14.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

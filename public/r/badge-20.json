@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-20",
-  "type": "registry:component",
   "title": "Badge 20",
   "description": "Failed status badge with destructive outline and ban icon",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-20.tsx",
-      "content": "import { BanIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\n\nconst BadgeFailedDemo = () => {\n  return (\n    <Badge\n      variant='outline'\n      className='text-destructive [a&]:hover:bg-destructive/10 [a&]:hover:text-destructive/90 border-destructive rounded-sm'\n    >\n      <BanIcon className='size-3' />\n      Failed\n    </Badge>\n  )\n}\n\nexport default BadgeFailedDemo\n",
+      "content": "import { BanIcon } from 'lucide-react'\r\n\r\nimport { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgeFailedDemo = () => {\r\n  return (\r\n    <Badge\r\n      variant='outline'\r\n      className='text-destructive [a&]:hover:bg-destructive/10 [a&]:hover:text-destructive/90 border-destructive rounded-sm'\r\n    >\r\n      <BanIcon className='size-3' />\r\n      Failed\r\n    </Badge>\r\n  )\r\n}\r\n\r\nexport default BadgeFailedDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-20.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

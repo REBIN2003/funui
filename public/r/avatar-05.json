@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-05",
-  "type": "registry:component",
   "title": "Avatar 5",
   "description": "Circular avatar with fallback initials.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-05.tsx",
-      "content": "import { Avatar, AvatarFallback } from '@/components/ui/avatar'\n\nconst AvatarFallbackDemo = () => {\n  return (\n    <Avatar>\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarFallbackDemo\n",
+      "content": "import { Avatar, AvatarFallback } from '@/components/ui/avatar'\r\n\r\nconst AvatarFallbackDemo = () => {\r\n  return (\r\n    <Avatar>\r\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n    </Avatar>\r\n  )\r\n}\r\n\r\nexport default AvatarFallbackDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-05.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

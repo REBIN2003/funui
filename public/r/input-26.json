@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-26",
-  "type": "registry:component",
   "title": "Input 26",
   "description": "A password input field with a toggle button to show/hide password visibility",
   "dependencies": [
@@ -15,9 +14,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-26.tsx",
-      "content": "'use client'\n\nimport { useId, useState } from 'react'\n\nimport { EyeIcon, EyeOffIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputPasswordDemo = () => {\n  const [isVisible, setIsVisible] = useState(false)\n\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Password input</Label>\n      <div className='relative'>\n        <Input id={id} type={isVisible ? 'text' : 'password'} placeholder='Password' className='pr-9' />\n        <Button\n          variant='ghost'\n          size='icon'\n          onClick={() => setIsVisible(prevState => !prevState)}\n          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\n        >\n          {isVisible ? <EyeOffIcon /> : <EyeIcon />}\n          <span className='sr-only'>{isVisible ? 'Hide password' : 'Show password'}</span>\n        </Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputPasswordDemo\n",
+      "content": "'use client'\r\n\r\nimport { useId, useState } from 'react'\r\n\r\nimport { EyeIcon, EyeOffIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputPasswordDemo = () => {\r\n  const [isVisible, setIsVisible] = useState(false)\r\n\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Password input</Label>\r\n      <div className='relative'>\r\n        <Input id={id} type={isVisible ? 'text' : 'password'} placeholder='Password' className='pr-9' />\r\n        <Button\r\n          variant='ghost'\r\n          size='icon'\r\n          onClick={() => setIsVisible(prevState => !prevState)}\r\n          className='text-muted-foreground focus-visible:ring-ring/50 absolute inset-y-0 right-0 rounded-l-none hover:bg-transparent'\r\n        >\r\n          {isVisible ? <EyeOffIcon /> : <EyeIcon />}\r\n          <span className='sr-only'>{isVisible ? 'Hide password' : 'Show password'}</span>\r\n        </Button>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputPasswordDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-26.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

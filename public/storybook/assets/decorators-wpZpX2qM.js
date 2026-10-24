@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-2s6bX4vc.js";var t;function n(){return(n=e((()=>{t=e=>(t,n)=>{let{overlay:r}=n.globals;return r?.visible?t(n.args,n):e?e(t,n):t(n.args,n)}})))()}export{t as n,n as t};

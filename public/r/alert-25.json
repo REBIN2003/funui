@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-25",
-  "type": "registry:component",
   "title": "Alert 25",
   "description": "Soft destructive alert with red background and subtle styling for errors.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-25.tsx",
-      "content": "import { TriangleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSoftDestructiveDemo = () => {\n  return (\n    <Alert className='bg-destructive/10 text-destructive border-none'>\n      <TriangleAlertIcon />\n      <AlertTitle>Upload failed</AlertTitle>\n      <AlertDescription className='text-destructive/80'>\n        Something went wrong. Please try again or use a different file format.\n      </AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSoftDestructiveDemo\n",
+      "content": "import { TriangleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertSoftDestructiveDemo = () => {\r\n  return (\r\n    <Alert className='bg-destructive/10 text-destructive border-none'>\r\n      <TriangleAlertIcon />\r\n      <AlertTitle>Upload failed</AlertTitle>\r\n      <AlertDescription className='text-destructive/80'>\r\n        Something went wrong. Please try again or use a different file format.\r\n      </AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertSoftDestructiveDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-25.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dropdown-menu-10",
-  "type": "registry:component",
   "title": "Dropdown Menu 10",
   "description": "End-aligned dropdown menu with browser actions and keyboard shortcuts",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/dropdown-menu/dropdown-menu-10.tsx",
-      "content": "import { Button } from '@/components/ui/button'\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from '@/components/ui/dropdown-menu'\n\nconst DropdownMenuAlignEndDemo = () => {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant='outline'>Align End</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent align='end' className='w-66'>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            New Tab<DropdownMenuShortcut>⌘ + T</DropdownMenuShortcut>\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            New Window <DropdownMenuShortcut>⌘ + N</DropdownMenuShortcut>\n          </DropdownMenuItem>\n          <DropdownMenuSeparator />\n          <DropdownMenuItem>\n            New Incognito Window <DropdownMenuShortcut>⌘ + ⇧ + N</DropdownMenuShortcut>\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            History <DropdownMenuShortcut>⌘ + Y</DropdownMenuShortcut>\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            Downloads <DropdownMenuShortcut>⌥ + ⇧ + L</DropdownMenuShortcut>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default DropdownMenuAlignEndDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\nimport {\r\n  DropdownMenu,\r\n  DropdownMenuContent,\r\n  DropdownMenuSeparator,\r\n  DropdownMenuShortcut,\r\n  DropdownMenuGroup,\r\n  DropdownMenuItem,\r\n  DropdownMenuTrigger\r\n} from '@/components/ui/dropdown-menu'\r\n\r\nconst DropdownMenuAlignEndDemo = () => {\r\n  return (\r\n    <DropdownMenu>\r\n      <DropdownMenuTrigger asChild>\r\n        <Button variant='outline'>Align End</Button>\r\n      </DropdownMenuTrigger>\r\n      <DropdownMenuContent align='end' className='w-66'>\r\n        <DropdownMenuGroup>\r\n          <DropdownMenuItem>\r\n            New Tab<DropdownMenuShortcut>⌘ + T</DropdownMenuShortcut>\r\n          </DropdownMenuItem>\r\n          <DropdownMenuItem>\r\n            New Window <DropdownMenuShortcut>⌘ + N</DropdownMenuShortcut>\r\n          </DropdownMenuItem>\r\n          <DropdownMenuSeparator />\r\n          <DropdownMenuItem>\r\n            New Incognito Window <DropdownMenuShortcut>⌘ + ⇧ + N</DropdownMenuShortcut>\r\n          </DropdownMenuItem>\r\n          <DropdownMenuItem>\r\n            History <DropdownMenuShortcut>⌘ + Y</DropdownMenuShortcut>\r\n          </DropdownMenuItem>\r\n          <DropdownMenuItem>\r\n            Downloads <DropdownMenuShortcut>⌥ + ⇧ + L</DropdownMenuShortcut>\r\n          </DropdownMenuItem>\r\n        </DropdownMenuGroup>\r\n      </DropdownMenuContent>\r\n    </DropdownMenu>\r\n  )\r\n}\r\n\r\nexport default DropdownMenuAlignEndDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/dropdown-menu/dropdown-menu-10.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

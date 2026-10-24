@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "pagination-10",
-  "type": "registry:component",
   "title": "Pagination 10",
   "description": "A card-style pagination component with border, shadow, and contained layout",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/pagination/pagination-10.tsx",
-      "content": "import {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from '@/components/ui/pagination'\n\nconst CardPaginationDemo = () => {\n  return (\n    <Pagination>\n      <PaginationContent className='rounded-md border p-1 shadow-xs'>\n        <PaginationItem>\n          <PaginationPrevious href='#' />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>1</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#' isActive>\n            2\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href='#'>3</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href='#' />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  )\n}\n\nexport default CardPaginationDemo\n",
+      "content": "import {\r\n  Pagination,\r\n  PaginationContent,\r\n  PaginationItem,\r\n  PaginationLink,\r\n  PaginationNext,\r\n  PaginationPrevious\r\n} from '@/components/ui/pagination'\r\n\r\nconst CardPaginationDemo = () => {\r\n  return (\r\n    <Pagination>\r\n      <PaginationContent className='rounded-md border p-1 shadow-xs'>\r\n        <PaginationItem>\r\n          <PaginationPrevious href='#' />\r\n        </PaginationItem>\r\n        <PaginationItem>\r\n          <PaginationLink href='#'>1</PaginationLink>\r\n        </PaginationItem>\r\n        <PaginationItem>\r\n          <PaginationLink href='#' isActive>\r\n            2\r\n          </PaginationLink>\r\n        </PaginationItem>\r\n        <PaginationItem>\r\n          <PaginationLink href='#'>3</PaginationLink>\r\n        </PaginationItem>\r\n        <PaginationItem>\r\n          <PaginationNext href='#' />\r\n        </PaginationItem>\r\n      </PaginationContent>\r\n    </Pagination>\r\n  )\r\n}\r\n\r\nexport default CardPaginationDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/pagination/pagination-10.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

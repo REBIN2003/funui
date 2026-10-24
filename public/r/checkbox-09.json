@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-09",
-  "type": "registry:component",
   "title": "Checkbox 9",
   "description": "Vertical group of checkboxes with icons for fruits selection",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/checkbox/checkbox-09.tsx",
-      "content": "import { AppleIcon, CherryIcon, GrapeIcon } from 'lucide-react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst fruits = [\n  { label: 'Apple', icon: AppleIcon },\n  { label: 'Cherry', icon: CherryIcon },\n  { label: 'Grape', icon: GrapeIcon }\n]\n\nconst CheckboxVerticalGroupDemo = () => {\n  return (\n    <div className='space-y-4'>\n      <Label className='font-semibold'>Favorite Fruits</Label>\n      <div className='flex flex-col gap-4'>\n        {fruits.map(({ label, icon: Icon }) => (\n          <div key={label} className='flex items-center gap-2'>\n            <Checkbox id={label} />\n            <Label htmlFor={label}>\n              <Icon className='size-4' aria-hidden='true' />\n              {label}\n            </Label>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n\nexport default CheckboxVerticalGroupDemo\n",
+      "content": "import { AppleIcon, CherryIcon, GrapeIcon } from 'lucide-react'\r\n\r\nimport { Checkbox } from '@/components/ui/checkbox'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst fruits = [\r\n  { label: 'Apple', icon: AppleIcon },\r\n  { label: 'Cherry', icon: CherryIcon },\r\n  { label: 'Grape', icon: GrapeIcon }\r\n]\r\n\r\nconst CheckboxVerticalGroupDemo = () => {\r\n  return (\r\n    <div className='space-y-4'>\r\n      <Label className='font-semibold'>Favorite Fruits</Label>\r\n      <div className='flex flex-col gap-4'>\r\n        {fruits.map(({ label, icon: Icon }) => (\r\n          <div key={label} className='flex items-center gap-2'>\r\n            <Checkbox id={label} />\r\n            <Label htmlFor={label}>\r\n              <Icon className='size-4' aria-hidden='true' />\r\n              {label}\r\n            </Label>\r\n          </div>\r\n        ))}\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CheckboxVerticalGroupDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/checkbox/checkbox-09.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

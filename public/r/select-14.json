@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-14",
-  "type": "registry:component",
   "title": "Select 14",
   "description": "A custom select dropdown with error state and validation message",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/select/select-14.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst SelectInvalidState = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with error</Label>\n      <Select defaultValue='1'>\n        <SelectTrigger id={id} aria-invalid className='w-full'>\n          <SelectValue />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value='1'>Tesla</SelectItem>\n          <SelectItem value='2'>BMW</SelectItem>\n          <SelectItem value='3'>Audi</SelectItem>\n          <SelectItem value='4'>Mercedes-Benz</SelectItem>\n        </SelectContent>\n      </Select>\n      <p className='text-destructive mt-2 text-xs' role='alert' aria-live='polite'>\n        Selected option is invalid\n      </p>\n    </div>\n  )\n}\n\nexport default SelectInvalidState\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\r\n\r\nconst SelectInvalidState = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Select with error</Label>\r\n      <Select defaultValue='1'>\r\n        <SelectTrigger id={id} aria-invalid className='w-full'>\r\n          <SelectValue />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          <SelectItem value='1'>Tesla</SelectItem>\r\n          <SelectItem value='2'>BMW</SelectItem>\r\n          <SelectItem value='3'>Audi</SelectItem>\r\n          <SelectItem value='4'>Mercedes-Benz</SelectItem>\r\n        </SelectContent>\r\n      </Select>\r\n      <p className='text-destructive mt-2 text-xs' role='alert' aria-live='polite'>\r\n        Selected option is invalid\r\n      </p>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SelectInvalidState\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/select/select-14.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

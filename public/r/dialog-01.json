@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dialog-01",
-  "type": "registry:component",
   "title": "Dialog 1",
   "description": "Basic alert dialog with confirmation for destructive actions",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/dialog/dialog-01.tsx",
-      "content": "import {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger\n} from '@/components/ui/alert-dialog'\nimport { Button } from '@/components/ui/button'\n\nconst AlertDialogDemo = () => {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant='outline'>Alert Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This action cannot be undone. This will permanently delete your account and remove your data from our\n            servers.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Continue</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  )\n}\n\nexport default AlertDialogDemo\n",
+      "content": "import {\r\n  AlertDialog,\r\n  AlertDialogAction,\r\n  AlertDialogCancel,\r\n  AlertDialogContent,\r\n  AlertDialogDescription,\r\n  AlertDialogFooter,\r\n  AlertDialogHeader,\r\n  AlertDialogTitle,\r\n  AlertDialogTrigger\r\n} from '@/components/ui/alert-dialog'\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst AlertDialogDemo = () => {\r\n  return (\r\n    <AlertDialog>\r\n      <AlertDialogTrigger asChild>\r\n        <Button variant='outline'>Alert Dialog</Button>\r\n      </AlertDialogTrigger>\r\n      <AlertDialogContent>\r\n        <AlertDialogHeader>\r\n          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>\r\n          <AlertDialogDescription>\r\n            This action cannot be undone. This will permanently delete your account and remove your data from our\r\n            servers.\r\n          </AlertDialogDescription>\r\n        </AlertDialogHeader>\r\n        <AlertDialogFooter>\r\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\r\n          <AlertDialogAction>Continue</AlertDialogAction>\r\n        </AlertDialogFooter>\r\n      </AlertDialogContent>\r\n    </AlertDialog>\r\n  )\r\n}\r\n\r\nexport default AlertDialogDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/dialog/dialog-01.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

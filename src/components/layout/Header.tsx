@@ -22,6 +22,9 @@ import ModeToggle from '@/components/layout/ModeToggle'
 import NavMenu from '@/components/layout/NavMenu'
 import { ThemeCustomizer } from '@/components/customizer'
 
+// Config Imports
+import { siteConfig } from '@/config/site'
+
 // SVG Imports
 import X from '@/assets/svg/X'
 import Discord from '@/assets/svg/Discord'
@@ -44,22 +47,12 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
                 <DropdownMenuGroup>
                   <DropdownMenuItem asChild>
                     <Link
-                      href='https://shadcnstudio.com/changelog'
+                      href={siteConfig.links.github}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='cursor-pointer'
                     >
-                      Changelog
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      href='https://github.com/orgs/themeselection/projects/42/views/2'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='cursor-pointer'
-                    >
-                      Roadmap
+                      Releases
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
@@ -75,7 +68,7 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
               <div className='flex items-center gap-1.5 max-md:hidden'>
                 <Button variant='ghost' size='icon' className='cursor-pointer' asChild>
                   <Link
-                    href='https://github.com/themeselection/shadcn-studio'
+                    href={siteConfig.links.github}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
@@ -84,13 +77,13 @@ const Header = ({ toggle }: { toggle: ReactNode }) => {
                   </Link>
                 </Button>
                 <Button variant='ghost' size='icon' className='cursor-pointer' asChild>
-                  <Link href='https://x.com/ajaypatel_aj' target='_blank' rel='noopener noreferrer'>
+                  <Link href={siteConfig.links.twitter} target='_blank' rel='noopener noreferrer'>
                     <X className='size-5' />
                     <span className='sr-only'>X</span>
                   </Link>
                 </Button>
                 <Button variant='ghost' size='icon' className='cursor-pointer' asChild>
-                  <Link href='https://discord.com/invite/kBHkY7DekX' target='_blank' rel='noopener noreferrer'>
+                  <Link href={siteConfig.links.discord} target='_blank' rel='noopener noreferrer'>
                     <Discord className='size-5' />
                     <span className='sr-only'>Discord</span>
                   </Link>

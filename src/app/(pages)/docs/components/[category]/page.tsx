@@ -19,6 +19,7 @@ import DocsNavigation from '@/components/DocsNavigation'
 
 // Config Imports
 import { categories, getCategory } from '@/config/components'
+import { siteConfig } from '@/config/site'
 
 // Util Imports
 import { getCachedFileTree, getCachedComponentItem, getComponentsByNames } from '@/utils/components'
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Shadcn ${category.name}`,
       description: `Discover the ${components.length}+ Shadcn ${category.name} Component variants${category.hasAnimation ? ` including animated ${name}` : ''}. Enhance your UI using customizable React ${name} with TailwindCSS.`,
-      url: `${process.env.NEXT_PUBLIC_APP_URL}/docs/components/${category.slug}`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/docs/components/${category.slug}`,
       images: [
         {
           url: 'https://cdn.themeselection.com/ts-assets/shadcn-studio/free/marketing/shadcn-studio-smm-banner.png',
@@ -63,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `Discover the ${components.length}+ Shadcn ${category.name} Component variants${category.hasAnimation ? ` including animated ${name}` : ''}. Enhance your UI using customizable React ${name} with TailwindCSS.`
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_APP_URL}/docs/components/${category.slug}`
+      canonical: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/docs/components/${category.slug}`
     }
   }
 }

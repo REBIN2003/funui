@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-11",
-  "type": "registry:component",
   "title": "Badge 11",
   "description": "Link badge that can be used as clickable navigation element",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-11.tsx",
-      "content": "import { ArrowRightIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\n\nconst BadgeLinkDemo = () => {\n  return (\n    <Badge asChild>\n      <a href='#' className='focus-visible:ring-ring/50 focus-visible:ring-2 focus-visible:outline-0'>\n        Link <ArrowRightIcon className='size-3' />\n      </a>\n    </Badge>\n  )\n}\n\nexport default BadgeLinkDemo\n",
+      "content": "import { ArrowRightIcon } from 'lucide-react'\r\n\r\nimport { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgeLinkDemo = () => {\r\n  return (\r\n    <Badge asChild>\r\n      <a href='#' className='focus-visible:ring-ring/50 focus-visible:ring-2 focus-visible:outline-0'>\r\n        Link <ArrowRightIcon className='size-3' />\r\n      </a>\r\n    </Badge>\r\n  )\r\n}\r\n\r\nexport default BadgeLinkDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-11.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

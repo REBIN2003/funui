@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-37",
-  "type": "registry:component",
   "title": "Select 37",
   "description": "An animated select dropdown with slide-in from bottom transition effect",
   "registryDependencies": [
@@ -11,12 +10,13 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/select/select-37.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectMenuSlideInDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select menu slide-in from bottom</Label>\n      <Select defaultValue='apple'>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select a fruit' />\n        </SelectTrigger>\n        <SelectContent className='data-[state=open]:slide-in-from-bottom-8 data-[state=open]:zoom-in-100 duration-400'>\n          <SelectGroup>\n            <SelectLabel>Fruits</SelectLabel>\n            <SelectItem value='apple'>Apple</SelectItem>\n            <SelectItem value='banana'>Banana</SelectItem>\n            <SelectItem value='blueberry'>Blueberry</SelectItem>\n            <SelectItem value='grapes'>Grapes</SelectItem>\n            <SelectItem value='pineapple'>Pineapple</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectMenuSlideInDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport {\r\n  Select,\r\n  SelectContent,\r\n  SelectGroup,\r\n  SelectItem,\r\n  SelectLabel,\r\n  SelectTrigger,\r\n  SelectValue\r\n} from '@/components/ui/select'\r\n\r\nconst SelectMenuSlideInDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Select menu slide-in from bottom</Label>\r\n      <Select defaultValue='apple'>\r\n        <SelectTrigger id={id} className='w-full'>\r\n          <SelectValue placeholder='Select a fruit' />\r\n        </SelectTrigger>\r\n        <SelectContent className='data-[state=open]:slide-in-from-bottom-8 data-[state=open]:zoom-in-100 duration-400'>\r\n          <SelectGroup>\r\n            <SelectLabel>Fruits</SelectLabel>\r\n            <SelectItem value='apple'>Apple</SelectItem>\r\n            <SelectItem value='banana'>Banana</SelectItem>\r\n            <SelectItem value='blueberry'>Blueberry</SelectItem>\r\n            <SelectItem value='grapes'>Grapes</SelectItem>\r\n            <SelectItem value='pineapple'>Pineapple</SelectItem>\r\n          </SelectGroup>\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SelectMenuSlideInDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/select/select-37.tsx"
     }
   ],
   "meta": {
     "isAnimated": true
-  }
+  },
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-14",
-  "type": "registry:component",
   "title": "Tooltip 14",
   "description": "An alert hover card with warning icon for error notifications",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tooltip/tooltip-14.tsx",
-      "content": "import { FileQuestionIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\n\nconst HoverCardAlertDemo = () => {\n  return (\n    <HoverCard openDelay={0} closeDelay={0}>\n      <HoverCardTrigger asChild>\n        <Button variant='link'>Hover Card Alert</Button>\n      </HoverCardTrigger>\n      <HoverCardContent className='w-72'>\n        <div className='flex flex-col items-center text-center'>\n          <span className='bg-destructive/10 mb-2.5 flex size-12 items-center justify-center rounded-full'>\n            <FileQuestionIcon className='text-destructive size-6' />\n          </span>\n          <div className='mb-1 text-lg font-medium'>File is corrupted</div>\n          <p className='text-sm'>It might have some virus or something that might be harmful for your device. </p>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n\nexport default HoverCardAlertDemo\n",
+      "content": "import { FileQuestionIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\r\n\r\nconst HoverCardAlertDemo = () => {\r\n  return (\r\n    <HoverCard openDelay={0} closeDelay={0}>\r\n      <HoverCardTrigger asChild>\r\n        <Button variant='link'>Hover Card Alert</Button>\r\n      </HoverCardTrigger>\r\n      <HoverCardContent className='w-72'>\r\n        <div className='flex flex-col items-center text-center'>\r\n          <span className='bg-destructive/10 mb-2.5 flex size-12 items-center justify-center rounded-full'>\r\n            <FileQuestionIcon className='text-destructive size-6' />\r\n          </span>\r\n          <div className='mb-1 text-lg font-medium'>File is corrupted</div>\r\n          <p className='text-sm'>It might have some virus or something that might be harmful for your device. </p>\r\n        </div>\r\n      </HoverCardContent>\r\n    </HoverCard>\r\n  )\r\n}\r\n\r\nexport default HoverCardAlertDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tooltip/tooltip-14.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

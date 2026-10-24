@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sonner-09",
-  "type": "registry:component",
   "title": "Sonner 9",
   "description": "A soft-styled info toast notification with color-mixed background for subtle messaging",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/sonner/sonner-09.tsx",
-      "content": "'use client'\n\nimport { toast } from 'sonner'\n\nimport { Button } from '@/components/ui/button'\n\nconst SoftInfoSonnerDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      onClick={() =>\n        toast.info('This is for your information, please note.', {\n          style: {\n            '--normal-bg':\n              'color-mix(in oklab, light-dark(var(--color-sky-600), var(--color-sky-400)) 10%, var(--background))',\n            '--normal-text': 'light-dark(var(--color-sky-600), var(--color-sky-400))',\n            '--normal-border': 'light-dark(var(--color-sky-600), var(--color-sky-400))'\n          } as React.CSSProperties\n        })\n      }\n    >\n      Soft Info Toast\n    </Button>\n  )\n}\n\nexport default SoftInfoSonnerDemo\n",
+      "content": "'use client'\r\n\r\nimport { toast } from 'sonner'\r\n\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst SoftInfoSonnerDemo = () => {\r\n  return (\r\n    <Button\r\n      variant='outline'\r\n      onClick={() =>\r\n        toast.info('This is for your information, please note.', {\r\n          style: {\r\n            '--normal-bg':\r\n              'color-mix(in oklab, light-dark(var(--color-sky-600), var(--color-sky-400)) 10%, var(--background))',\r\n            '--normal-text': 'light-dark(var(--color-sky-600), var(--color-sky-400))',\r\n            '--normal-border': 'light-dark(var(--color-sky-600), var(--color-sky-400))'\r\n          } as React.CSSProperties\r\n        })\r\n      }\r\n    >\r\n      Soft Info Toast\r\n    </Button>\r\n  )\r\n}\r\n\r\nexport default SoftInfoSonnerDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/sonner/sonner-09.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

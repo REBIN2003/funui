@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-group-07",
-  "type": "registry:component",
   "title": "Button Group 7",
   "description": "Number input button group with plus/minus controls and value display",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button-group/button-group-07.tsx",
-      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { MinusIcon, PlusIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonGroupNumberDemo = () => {\n  const [value, setValue] = useState(216)\n\n  return (\n    <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>\n      <Button\n        size='icon'\n        className='rounded-none rounded-l-full focus-visible:z-10'\n        onClick={() => {\n          setValue(value - 1)\n        }}\n      >\n        <MinusIcon />\n        <span className='sr-only'>Minus</span>\n      </Button>\n      <span className='bg-primary text-primary-foreground inline-flex items-center px-3 py-2 text-sm font-medium'>\n        {`${value}px`}\n      </span>\n      <Button\n        size='icon'\n        className='rounded-none rounded-r-full focus-visible:z-10'\n        onClick={() => {\n          setValue(value + 1)\n        }}\n      >\n        <PlusIcon />\n        <span className='sr-only'>Plus</span>\n      </Button>\n    </div>\n  )\n}\n\nexport default ButtonGroupNumberDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\n\r\nimport { MinusIcon, PlusIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst ButtonGroupNumberDemo = () => {\r\n  const [value, setValue] = useState(216)\r\n\r\n  return (\r\n    <div className='divide-primary-foreground/30 inline-flex w-fit divide-x rounded-md shadow-xs'>\r\n      <Button\r\n        size='icon'\r\n        className='rounded-none rounded-l-full focus-visible:z-10'\r\n        onClick={() => {\r\n          setValue(value - 1)\r\n        }}\r\n      >\r\n        <MinusIcon />\r\n        <span className='sr-only'>Minus</span>\r\n      </Button>\r\n      <span className='bg-primary text-primary-foreground inline-flex items-center px-3 py-2 text-sm font-medium'>\r\n        {`${value}px`}\r\n      </span>\r\n      <Button\r\n        size='icon'\r\n        className='rounded-none rounded-r-full focus-visible:z-10'\r\n        onClick={() => {\r\n          setValue(value + 1)\r\n        }}\r\n      >\r\n        <PlusIcon />\r\n        <span className='sr-only'>Plus</span>\r\n      </Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default ButtonGroupNumberDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button-group/button-group-07.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

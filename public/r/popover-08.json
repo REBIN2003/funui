@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "popover-08",
-  "type": "registry:component",
   "title": "Popover 8",
   "description": "A feedback popover with textarea for user comments and send/cancel actions",
   "dependencies": [
@@ -15,9 +14,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/popover/popover-08.tsx",
-      "content": "import { MessageCircleIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst PopoverFeedbackDemo = () => {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <MessageCircleIcon />\n          <span className='sr-only'>Feedback</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='grid gap-2'>\n          <div className='font-medium'>Feedback</div>\n          <Textarea placeholder='Type your message here.' className='max-h-56' />\n          <div className='grid w-full grid-cols-2 gap-2'>\n            <Button size='sm'>Send</Button>\n            <Button variant='secondary' size='sm'>\n              Cancel\n            </Button>\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverFeedbackDemo\n",
+      "content": "import { MessageCircleIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\r\nimport { Textarea } from '@/components/ui/textarea'\r\n\r\nconst PopoverFeedbackDemo = () => {\r\n  return (\r\n    <Popover>\r\n      <PopoverTrigger asChild>\r\n        <Button variant='outline' size='icon'>\r\n          <MessageCircleIcon />\r\n          <span className='sr-only'>Feedback</span>\r\n        </Button>\r\n      </PopoverTrigger>\r\n      <PopoverContent className='w-80'>\r\n        <div className='grid gap-2'>\r\n          <div className='font-medium'>Feedback</div>\r\n          <Textarea placeholder='Type your message here.' className='max-h-56' />\r\n          <div className='grid w-full grid-cols-2 gap-2'>\r\n            <Button size='sm'>Send</Button>\r\n            <Button variant='secondary' size='sm'>\r\n              Cancel\r\n            </Button>\r\n          </div>\r\n        </div>\r\n      </PopoverContent>\r\n    </Popover>\r\n  )\r\n}\r\n\r\nexport default PopoverFeedbackDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/popover/popover-08.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

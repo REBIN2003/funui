@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-46",
-  "type": "registry:component",
   "title": "Button 46",
   "description": "Destructive button with heartbeat pulse animation effect",
   "registryDependencies": [
@@ -10,7 +9,7 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-46.tsx",
-      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonHeartbeatEffectDemo = () => {\n  return (\n    <Button variant='destructive' className='animate-heartbeat dark:bg-destructive/100 m-9'>\n      Heartbeat Effect\n    </Button>\n  )\n}\n\nexport default ButtonHeartbeatEffectDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\n\r\nconst ButtonHeartbeatEffectDemo = () => {\r\n  return (\r\n    <Button variant='destructive' className='animate-heartbeat dark:bg-destructive/100 m-9'>\r\n      Heartbeat Effect\r\n    </Button>\r\n  )\r\n}\r\n\r\nexport default ButtonHeartbeatEffectDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-46.tsx"
     }
@@ -39,5 +38,6 @@
   "meta": {
     "isAnimated": true,
     "badge": "Updated"
-  }
+  },
+  "type": "registry:component"
 }

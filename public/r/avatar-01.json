@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-01",
-  "type": "registry:component",
   "title": "Avatar 1",
   "description": "Basic avatar with profile image and fallback initials.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-01.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarDemo = () => {\n  return (\n    <Avatar>\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst AvatarDemo = () => {\r\n  return (\r\n    <Avatar>\r\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\r\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n    </Avatar>\r\n  )\r\n}\r\n\r\nexport default AvatarDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-01.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

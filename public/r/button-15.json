@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-15",
-  "type": "registry:component",
   "title": "Button 15",
   "description": "Destructive outline button for discard/delete actions",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-15.tsx",
-      "content": "import { Trash2Icon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\n\nconst ButtonDiscardDemo = () => {\n  return (\n    <Button\n      variant='outline'\n      className='hover:bg-destructive/10! text-destructive! border-destructive! focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40'\n    >\n      <Trash2Icon />\n      Discard\n    </Button>\n  )\n}\n\nexport default ButtonDiscardDemo\n",
+      "content": "import { Trash2Icon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst ButtonDiscardDemo = () => {\r\n  return (\r\n    <Button\r\n      variant='outline'\r\n      className='hover:bg-destructive/10! text-destructive! border-destructive! focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40'\r\n    >\r\n      <Trash2Icon />\r\n      Discard\r\n    </Button>\r\n  )\r\n}\r\n\r\nexport default ButtonDiscardDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-15.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

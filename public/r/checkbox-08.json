@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-08",
-  "type": "registry:component",
   "title": "Checkbox 8",
   "description": "Horizontal group of checkboxes for technology selection with organized layout",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/checkbox/checkbox-08.tsx",
-      "content": "import { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst technologies = ['React', 'Next.js', 'Remix']\n\nconst CheckboxHorizontalGroupDemo = () => {\n  return (\n    <div className='space-y-4'>\n      <Label className='font-semibold'>Technologies</Label>\n      <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>\n        {technologies.map(label => (\n          <div key={label} className='flex items-center gap-2'>\n            <Checkbox id={label} />\n            <Label htmlFor={label}>{label}</Label>\n          </div>\n        ))}\n      </div>\n    </div>\n  )\n}\n\nexport default CheckboxHorizontalGroupDemo\n",
+      "content": "import { Checkbox } from '@/components/ui/checkbox'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst technologies = ['React', 'Next.js', 'Remix']\r\n\r\nconst CheckboxHorizontalGroupDemo = () => {\r\n  return (\r\n    <div className='space-y-4'>\r\n      <Label className='font-semibold'>Technologies</Label>\r\n      <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>\r\n        {technologies.map(label => (\r\n          <div key={label} className='flex items-center gap-2'>\r\n            <Checkbox id={label} />\r\n            <Label htmlFor={label}>{label}</Label>\r\n          </div>\r\n        ))}\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CheckboxHorizontalGroupDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/checkbox/checkbox-08.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

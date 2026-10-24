@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-32",
-  "type": "registry:component",
   "title": "Input 32",
   "description": "Input field with a right-aligned icon button, ideal for actions like downloading or submitting email addresses",
   "dependencies": [
@@ -15,9 +14,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-32.tsx",
-      "content": "import { useId } from 'react'\n\nimport { DownloadIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputIconButtonDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with icon button</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input\n          id={id}\n          type='email'\n          placeholder='Email address'\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\n        />\n        <Button variant='outline' size='icon' className='rounded-l-none'>\n          <DownloadIcon />\n          <span className='sr-only'>Download</span>\n        </Button>\n      </div>\n    </div>\n  )\n}\n\nexport default InputIconButtonDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { DownloadIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputIconButtonDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Input with icon button</Label>\r\n      <div className='flex rounded-md shadow-xs'>\r\n        <Input\r\n          id={id}\r\n          type='email'\r\n          placeholder='Email address'\r\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\r\n        />\r\n        <Button variant='outline' size='icon' className='rounded-l-none'>\r\n          <DownloadIcon />\r\n          <span className='sr-only'>Download</span>\r\n        </Button>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputIconButtonDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-32.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

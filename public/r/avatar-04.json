@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-04",
-  "type": "registry:component",
   "title": "Avatar 4",
   "description": "Large sized avatar variant with expanded dimensions.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-04.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarSizeDemo = () => {\n  return (\n    <Avatar className='size-12'>\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarSizeDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst AvatarSizeDemo = () => {\r\n  return (\r\n    <Avatar className='size-12'>\r\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\r\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n    </Avatar>\r\n  )\r\n}\r\n\r\nexport default AvatarSizeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-04.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

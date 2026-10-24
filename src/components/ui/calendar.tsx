@@ -144,7 +144,8 @@ function CalendarDayButton({ className, day, modifiers, ...props }: React.Compon
       ref={ref}
       variant='ghost'
       size='icon'
-      data-day={day.date.toLocaleDateString()}
+      data-day={`${day.date.getFullYear()}-${String(day.date.getMonth() + 1).padStart(2, '0')}-${String(day.date.getDate()).padStart(2, '0')}`}
+      suppressHydrationWarning
       data-selected-single={
         modifiers.selected && !modifiers.range_start && !modifiers.range_end && !modifiers.range_middle
       }

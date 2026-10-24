@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-12",
-  "type": "registry:component",
   "title": "Textarea 12",
   "description": "A textarea with end icon positioned on the right side",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/textarea/textarea-12.tsx",
-      "content": "import { useId } from 'react'\n\nimport { HomeIcon } from 'lucide-react'\n\nimport { Textarea } from '@/components/ui/textarea'\nimport { Label } from '@/components/ui/label'\n\nconst TextareaEndIconDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with end icon</Label>\n      <div className='relative'>\n        <div className='text-muted-foreground pointer-events-none absolute top-2.5 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\n          <HomeIcon className='size-4' />\n          <span className='sr-only'>Address</span>\n        </div>\n        <Textarea id={id} placeholder='Address' className='peer pr-9' />\n      </div>\n    </div>\n  )\n}\n\nexport default TextareaEndIconDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { HomeIcon } from 'lucide-react'\r\n\r\nimport { Textarea } from '@/components/ui/textarea'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst TextareaEndIconDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Textarea with end icon</Label>\r\n      <div className='relative'>\r\n        <div className='text-muted-foreground pointer-events-none absolute top-2.5 right-0 flex items-center justify-center pr-3 peer-disabled:opacity-50'>\r\n          <HomeIcon className='size-4' />\r\n          <span className='sr-only'>Address</span>\r\n        </div>\r\n        <Textarea id={id} placeholder='Address' className='peer pr-9' />\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TextareaEndIconDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/textarea/textarea-12.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

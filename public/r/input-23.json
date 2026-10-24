@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-23",
-  "type": "registry:component",
   "title": "Input 23",
   "description": "An email input field with an overlapping label positioned over the border",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-23.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputOverlappingLabelDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='group relative w-full max-w-xs'>\n      <Label\n        htmlFor={id}\n        className='bg-background text-foreground absolute top-0 left-2 z-1 block -translate-y-1/2 px-1 text-xs'\n      >\n        Input with overlapping label\n      </Label>\n      <Input id={id} type='email' placeholder='Email address' className='dark:bg-background h-10' />\n    </div>\n  )\n}\n\nexport default InputOverlappingLabelDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputOverlappingLabelDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='group relative w-full max-w-xs'>\r\n      <Label\r\n        htmlFor={id}\r\n        className='bg-background text-foreground absolute top-0 left-2 z-1 block -translate-y-1/2 px-1 text-xs'\r\n      >\r\n        Input with overlapping label\r\n      </Label>\r\n      <Input id={id} type='email' placeholder='Email address' className='dark:bg-background h-10' />\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputOverlappingLabelDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-23.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "select-22",
-  "type": "registry:component",
   "title": "Select 22",
   "description": "A custom select dropdown with multiple option groups",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/select/select-22.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from '@/components/ui/select'\n\nconst SelectWithOptionsGroupsDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Select with options groups</Label>\n      <Select defaultValue='7'>\n        <SelectTrigger id={id} className='w-full'>\n          <SelectValue placeholder='Select framework' />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>North America</SelectLabel>\n            <SelectItem value='1'>United States</SelectItem>\n            <SelectItem value='2'>Canada</SelectItem>\n            <SelectItem value='3'>Mexico</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Europe</SelectLabel>\n            <SelectItem value='4'>United Kingdom</SelectItem>\n            <SelectItem value='5'>Germany</SelectItem>\n            <SelectItem value='6'>France</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Asia</SelectLabel>\n            <SelectItem value='7'>India</SelectItem>\n            <SelectItem value='8'>Japan</SelectItem>\n            <SelectItem value='9'>China</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  )\n}\n\nexport default SelectWithOptionsGroupsDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport {\r\n  Select,\r\n  SelectContent,\r\n  SelectGroup,\r\n  SelectItem,\r\n  SelectLabel,\r\n  SelectTrigger,\r\n  SelectValue\r\n} from '@/components/ui/select'\r\n\r\nconst SelectWithOptionsGroupsDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Select with options groups</Label>\r\n      <Select defaultValue='7'>\r\n        <SelectTrigger id={id} className='w-full'>\r\n          <SelectValue placeholder='Select framework' />\r\n        </SelectTrigger>\r\n        <SelectContent>\r\n          <SelectGroup>\r\n            <SelectLabel>North America</SelectLabel>\r\n            <SelectItem value='1'>United States</SelectItem>\r\n            <SelectItem value='2'>Canada</SelectItem>\r\n            <SelectItem value='3'>Mexico</SelectItem>\r\n          </SelectGroup>\r\n          <SelectGroup>\r\n            <SelectLabel>Europe</SelectLabel>\r\n            <SelectItem value='4'>United Kingdom</SelectItem>\r\n            <SelectItem value='5'>Germany</SelectItem>\r\n            <SelectItem value='6'>France</SelectItem>\r\n          </SelectGroup>\r\n          <SelectGroup>\r\n            <SelectLabel>Asia</SelectLabel>\r\n            <SelectItem value='7'>India</SelectItem>\r\n            <SelectItem value='8'>Japan</SelectItem>\r\n            <SelectItem value='9'>China</SelectItem>\r\n          </SelectGroup>\r\n        </SelectContent>\r\n      </Select>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SelectWithOptionsGroupsDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/select/select-22.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

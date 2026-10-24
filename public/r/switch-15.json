@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch-15",
-  "type": "registry:component",
   "title": "Switch 15",
   "description": "A switch integrated within a card layout with database icon for backup settings",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/switch/switch-15.tsx",
-      "content": "import { useId } from 'react'\n\nimport { DatabaseIcon } from 'lucide-react'\n\nimport { Label } from '@/components/ui/label'\nimport { Switch } from '@/components/ui/switch'\n\nconst SwitchCardDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none'>\n      <Switch\n        id={id}\n        className='order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2.5 data-[state=checked]:[&_span]:rtl:-translate-x-2.5'\n        aria-describedby={`${id}-description`}\n      />\n      <div className='flex grow items-center gap-3'>\n        <DatabaseIcon />\n        <div className='grid grow gap-2'>\n          <Label htmlFor={id}>Backup</Label>\n          <p id={`${id}-description`} className='text-muted-foreground text-xs'>\n            Backup every file from your project.\n          </p>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nexport default SwitchCardDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { DatabaseIcon } from 'lucide-react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport { Switch } from '@/components/ui/switch'\r\n\r\nconst SwitchCardDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none'>\r\n      <Switch\r\n        id={id}\r\n        className='order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2.5 data-[state=checked]:[&_span]:rtl:-translate-x-2.5'\r\n        aria-describedby={`${id}-description`}\r\n      />\r\n      <div className='flex grow items-center gap-3'>\r\n        <DatabaseIcon />\r\n        <div className='grid grow gap-2'>\r\n          <Label htmlFor={id}>Backup</Label>\r\n          <p id={`${id}-description`} className='text-muted-foreground text-xs'>\r\n            Backup every file from your project.\r\n          </p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default SwitchCardDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/switch/switch-15.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

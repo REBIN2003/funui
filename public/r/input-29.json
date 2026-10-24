@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-29",
-  "type": "registry:component",
   "title": "Input 29",
   "description": "A domain input field with a TLD selector dropdown at the end",
   "registryDependencies": [
@@ -12,9 +11,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-29.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\n\nconst InputEndSelectDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input with end select</Label>\n      <div className='flex rounded-md shadow-xs'>\n        <Input\n          id={id}\n          type='text'\n          placeholder='shadcnstudio'\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\n        />\n        <Select defaultValue='.com'>\n          <SelectTrigger id={id} className='rounded-l-none shadow-none'>\n            <SelectValue />\n          </SelectTrigger>\n          <SelectContent>\n            <SelectItem value='.com' className='pr-2 [&_svg]:hidden'>\n              .com\n            </SelectItem>\n            <SelectItem value='.org' className='pr-2 [&_svg]:hidden'>\n              .org\n            </SelectItem>\n            <SelectItem value='.net' className='pr-2 [&_svg]:hidden'>\n              .net\n            </SelectItem>\n          </SelectContent>\n        </Select>\n      </div>\n    </div>\n  )\n}\n\nexport default InputEndSelectDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\nimport { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'\r\n\r\nconst InputEndSelectDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Input with end select</Label>\r\n      <div className='flex rounded-md shadow-xs'>\r\n        <Input\r\n          id={id}\r\n          type='text'\r\n          placeholder='shadcnstudio'\r\n          className='-me-px rounded-r-none shadow-none focus-visible:z-1'\r\n        />\r\n        <Select defaultValue='.com'>\r\n          <SelectTrigger id={id} className='rounded-l-none shadow-none'>\r\n            <SelectValue />\r\n          </SelectTrigger>\r\n          <SelectContent>\r\n            <SelectItem value='.com' className='pr-2 [&_svg]:hidden'>\r\n              .com\r\n            </SelectItem>\r\n            <SelectItem value='.org' className='pr-2 [&_svg]:hidden'>\r\n              .org\r\n            </SelectItem>\r\n            <SelectItem value='.net' className='pr-2 [&_svg]:hidden'>\r\n              .net\r\n            </SelectItem>\r\n          </SelectContent>\r\n        </Select>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputEndSelectDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-29.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

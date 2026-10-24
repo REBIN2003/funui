@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "breadcrumb-03",
-  "type": "registry:component",
   "title": "Breadcrumb 3",
   "description": "Breadcrumb with folder icons and chevron separators for file system navigation",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/breadcrumb/breadcrumb-03.tsx",
-      "content": "import { ChevronsRightIcon, FileIcon, FolderIcon, HomeIcon } from 'lucide-react'\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from '@/components/ui/breadcrumb'\n\nconst BreadcrumbChevronsSeparatorDemo = () => {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#'>\n            <HomeIcon className='size-4' />\n            <span className='sr-only'>Home</span>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRightIcon />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbLink href='#' className='flex items-center gap-2'>\n            <FolderIcon className='size-4' />\n            Documents\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator>\n          <ChevronsRightIcon />\n        </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage className='flex items-center gap-2'>\n            <FileIcon className='inline size-4' />\n            Add Document\n          </BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  )\n}\n\nexport default BreadcrumbChevronsSeparatorDemo\n",
+      "content": "import { ChevronsRightIcon, FileIcon, FolderIcon, HomeIcon } from 'lucide-react'\r\n\r\nimport {\r\n  Breadcrumb,\r\n  BreadcrumbItem,\r\n  BreadcrumbLink,\r\n  BreadcrumbList,\r\n  BreadcrumbPage,\r\n  BreadcrumbSeparator\r\n} from '@/components/ui/breadcrumb'\r\n\r\nconst BreadcrumbChevronsSeparatorDemo = () => {\r\n  return (\r\n    <Breadcrumb>\r\n      <BreadcrumbList>\r\n        <BreadcrumbItem>\r\n          <BreadcrumbLink href='#'>\r\n            <HomeIcon className='size-4' />\r\n            <span className='sr-only'>Home</span>\r\n          </BreadcrumbLink>\r\n        </BreadcrumbItem>\r\n        <BreadcrumbSeparator>\r\n          <ChevronsRightIcon />\r\n        </BreadcrumbSeparator>\r\n        <BreadcrumbItem>\r\n          <BreadcrumbLink href='#' className='flex items-center gap-2'>\r\n            <FolderIcon className='size-4' />\r\n            Documents\r\n          </BreadcrumbLink>\r\n        </BreadcrumbItem>\r\n        <BreadcrumbSeparator>\r\n          <ChevronsRightIcon />\r\n        </BreadcrumbSeparator>\r\n        <BreadcrumbItem>\r\n          <BreadcrumbPage className='flex items-center gap-2'>\r\n            <FileIcon className='inline size-4' />\r\n            Add Document\r\n          </BreadcrumbPage>\r\n        </BreadcrumbItem>\r\n      </BreadcrumbList>\r\n    </Breadcrumb>\r\n  )\r\n}\r\n\r\nexport default BreadcrumbChevronsSeparatorDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/breadcrumb/breadcrumb-03.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

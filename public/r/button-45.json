@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-45",
-  "type": "registry:component",
   "title": "Button 45",
   "description": "Button with magnetic effect that follows mouse movement",
   "dependencies": [
@@ -15,18 +14,19 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-45.tsx",
-      "content": "import { MagneticButton } from '@/components/ui/magnetic-button'\n\nconst ButtonMagneticEffectDemo = () => {\n  return <MagneticButton>Magnetic Button</MagneticButton>\n}\n\nexport default ButtonMagneticEffectDemo\n",
+      "content": "import { MagneticButton } from '@/components/ui/magnetic-button'\r\n\r\nconst ButtonMagneticEffectDemo = () => {\r\n  return <MagneticButton>Magnetic Button</MagneticButton>\r\n}\r\n\r\nexport default ButtonMagneticEffectDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-45.tsx"
     },
     {
       "path": "src/components/ui/magnetic-button.tsx",
-      "content": "'use client'\n\nimport * as React from 'react'\n\nimport { motion, type HTMLMotionProps, type Transition } from 'motion/react'\nimport type { VariantProps } from 'class-variance-authority'\n\nimport { cn } from '@/lib/utils'\nimport { buttonVariants } from '@/components/ui/button'\n\ninterface Position {\n  x: number\n  y: number\n}\n\ninterface MagneticButtonProps extends HTMLMotionProps<'button'>, VariantProps<typeof buttonVariants> {\n  children: React.ReactNode\n  scale?: number\n  transition?: Transition\n}\n\nfunction MagneticButton({ children, className, size, variant, ...props }: MagneticButtonProps) {\n  const ref = React.useRef<HTMLButtonElement>(null)\n  const [position, setPosition] = React.useState<Position>({ x: 0, y: 0 })\n\n  const handleMouse = (e: React.MouseEvent<HTMLButtonElement>) => {\n    if (ref.current) {\n      const { clientX, clientY } = e\n      const { height, width, left, top } = ref.current.getBoundingClientRect()\n      const middleX = clientX - (left + width / 2)\n      const middleY = clientY - (top + height / 2)\n\n      setPosition({ x: middleX, y: middleY })\n    }\n  }\n\n  const reset = () => {\n    setPosition({ x: 0, y: 0 })\n  }\n\n  const { x, y } = position\n\n  return (\n    <motion.button\n      ref={ref}\n      onMouseMove={handleMouse}\n      onMouseLeave={reset}\n      animate={{ x, y }}\n      transition={{ type: 'spring', stiffness: 150, damping: 15, mass: 0.1 }}\n      whileTap={{\n        scale: 0.95\n      }}\n      className={cn(buttonVariants({ variant, size }), 'relative transition-none', className)}\n      {...props}\n    >\n      {children}\n    </motion.button>\n  )\n}\n\nexport { MagneticButton, type MagneticButtonProps }\n",
+      "content": "'use client'\r\n\r\nimport * as React from 'react'\r\n\r\nimport { motion, type HTMLMotionProps, type Transition } from 'motion/react'\r\nimport type { VariantProps } from 'class-variance-authority'\r\n\r\nimport { cn } from '@/lib/utils'\r\nimport { buttonVariants } from '@/components/ui/button'\r\n\r\ninterface Position {\r\n  x: number\r\n  y: number\r\n}\r\n\r\ninterface MagneticButtonProps extends HTMLMotionProps<'button'>, VariantProps<typeof buttonVariants> {\r\n  children: React.ReactNode\r\n  scale?: number\r\n  transition?: Transition\r\n}\r\n\r\nfunction MagneticButton({ children, className, size, variant, ...props }: MagneticButtonProps) {\r\n  const ref = React.useRef<HTMLButtonElement>(null)\r\n  const [position, setPosition] = React.useState<Position>({ x: 0, y: 0 })\r\n\r\n  const handleMouse = (e: React.MouseEvent<HTMLButtonElement>) => {\r\n    if (ref.current) {\r\n      const { clientX, clientY } = e\r\n      const { height, width, left, top } = ref.current.getBoundingClientRect()\r\n      const middleX = clientX - (left + width / 2)\r\n      const middleY = clientY - (top + height / 2)\r\n\r\n      setPosition({ x: middleX, y: middleY })\r\n    }\r\n  }\r\n\r\n  const reset = () => {\r\n    setPosition({ x: 0, y: 0 })\r\n  }\r\n\r\n  const { x, y } = position\r\n\r\n  return (\r\n    <motion.button\r\n      ref={ref}\r\n      onMouseMove={handleMouse}\r\n      onMouseLeave={reset}\r\n      animate={{ x, y }}\r\n      transition={{ type: 'spring', stiffness: 150, damping: 15, mass: 0.1 }}\r\n      whileTap={{\r\n        scale: 0.95\r\n      }}\r\n      className={cn(buttonVariants({ variant, size }), 'relative transition-none', className)}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </motion.button>\r\n  )\r\n}\r\n\r\nexport { MagneticButton, type MagneticButtonProps }\r\n",
       "type": "registry:ui",
       "target": "components/ui/magnetic-button.tsx"
     }
   ],
   "meta": {
     "isAnimated": true
-  }
+  },
+  "type": "registry:component"
 }

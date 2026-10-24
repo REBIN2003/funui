@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-06",
-  "type": "registry:component",
   "title": "Avatar 6",
   "description": "Icon avatar using Lucide icon with colored background.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-06.tsx",
-      "content": "import { HomeIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\n\nconst AvatarIconDemo = () => {\n  return (\n    <Avatar>\n      <AvatarFallback className='bg-indigo-500/10 text-indigo-500'>\n        <HomeIcon className='size-4' />\n      </AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarIconDemo\n",
+      "content": "import { HomeIcon } from 'lucide-react'\r\n\r\nimport { Avatar, AvatarFallback } from '@/components/ui/avatar'\r\n\r\nconst AvatarIconDemo = () => {\r\n  return (\r\n    <Avatar>\r\n      <AvatarFallback className='bg-indigo-500/10 text-indigo-500'>\r\n        <HomeIcon className='size-4' />\r\n      </AvatarFallback>\r\n    </Avatar>\r\n  )\r\n}\r\n\r\nexport default AvatarIconDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

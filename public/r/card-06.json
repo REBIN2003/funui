@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card-06",
-  "type": "registry:component",
   "title": "Card 6",
   "description": "Horizontal layout card with side-by-side image and content",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/card/card-06.tsx",
-      "content": "import { Card, CardContent, CardHeader, CardDescription, CardTitle, CardFooter } from '@/components/ui/card'\nimport { Button } from '@/components/ui/button'\n\nconst CardHorizontalDemo = () => {\n  return (\n    <Card className='max-w-lg py-0 sm:flex-row sm:gap-0'>\n      <CardContent className='grow-1 px-0'>\n        <img\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-3.png'\n          alt='Banner'\n          className='size-full rounded-l-xl'\n        />\n      </CardContent>\n      <div className='sm:min-w-54'>\n        <CardHeader className='pt-6'>\n          <CardTitle>Dreamy Colorwave Gradient</CardTitle>\n          <CardDescription>A smooth blend of vibrant pinks, purples, and blues for a magical touch.</CardDescription>\n        </CardHeader>\n        <CardFooter className='gap-3 py-6'>\n          <Button className='bg-transparent bg-gradient-to-br from-purple-500 to-pink-500 text-white focus-visible:ring-pink-600/20'>\n            Explore More\n          </Button>\n        </CardFooter>\n      </div>\n    </Card>\n  )\n}\n\nexport default CardHorizontalDemo\n",
+      "content": "import { Card, CardContent, CardHeader, CardDescription, CardTitle, CardFooter } from '@/components/ui/card'\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst CardHorizontalDemo = () => {\r\n  return (\r\n    <Card className='max-w-lg py-0 sm:flex-row sm:gap-0'>\r\n      <CardContent className='grow-1 px-0'>\r\n        <img\r\n          src='https://cdn.shadcnstudio.com/ss-assets/components/card/image-3.png'\r\n          alt='Banner'\r\n          className='size-full rounded-l-xl'\r\n        />\r\n      </CardContent>\r\n      <div className='sm:min-w-54'>\r\n        <CardHeader className='pt-6'>\r\n          <CardTitle>Dreamy Colorwave Gradient</CardTitle>\r\n          <CardDescription>A smooth blend of vibrant pinks, purples, and blues for a magical touch.</CardDescription>\r\n        </CardHeader>\r\n        <CardFooter className='gap-3 py-6'>\r\n          <Button className='bg-transparent bg-gradient-to-br from-purple-500 to-pink-500 text-white focus-visible:ring-pink-600/20'>\r\n            Explore More\r\n          </Button>\r\n        </CardFooter>\r\n      </div>\r\n    </Card>\r\n  )\r\n}\r\n\r\nexport default CardHorizontalDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/card/card-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

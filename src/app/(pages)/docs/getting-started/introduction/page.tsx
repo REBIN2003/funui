@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       'An open-source collection of copy-paste shadcn components, blocks, and templates - paired with a powerful theme generator to craft, customize, and ship faster.',
     type: 'website',
-    siteName: 'Shadcn Studio',
+    siteName: 'Funui Studio',
     url: `${process.env.NEXT_PUBLIC_APP_URL}/docs/getting-started/introduction`,
     images: [
       {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         type: 'image/png',
         width: 1200,
         height: 630,
-        alt: 'Shadcn Studio - Shadcn UI Components, Blocks & Templates'
+        alt: 'Funui Studio - Shadcn UI Components, Blocks & Templates'
       }
     ]
   },
@@ -56,7 +56,7 @@ const DocsPage = () => {
         </p>
       </div>
       <div className='flex flex-col space-y-3'>
-        <h2 className='text-xl font-bold sm:text-2xl'>What is shadcn/studio?</h2>
+        <h2 className='text-xl font-bold sm:text-2xl'>What is Funui Studio?</h2>
         <p className='text-foreground/80'>
           <strong className='text-foreground font-semibold'>
             This isn&apos;t a traditional component library or a replacement for Shadcn
@@ -74,7 +74,7 @@ const DocsPage = () => {
       <div className='flex flex-col space-y-3'>
         <h2 className='text-xl font-bold sm:text-2xl'>Not a Standard Library, but a Distribution of Components</h2>
         <p className='text-foreground/80'>
-          Following the philosophy of Shadcn, shadcn/studio isn&apos;t a conventional &quot;install-from-NPM&quot;
+          Following the philosophy of Shadcn, Funui Studio isn&apos;t a conventional &quot;install-from-NPM&quot;
           library. Rather, it&apos;s an open-source distribution of components designed for maximum adaptability. You
           can copy the code, modify styles, adjust logic, or integrate it with other tools—free from the limitations of
           typical libraries. This &quot;open code&quot; model empowers you to customize with confidence and creativity.
@@ -82,7 +82,7 @@ const DocsPage = () => {
       </div>
 
       <div className='flex flex-col space-y-3'>
-        <h2 className='text-xl font-bold sm:text-2xl'>Why Should I use shadcn/studio?</h2>
+        <h2 className='text-xl font-bold sm:text-2xl'>Why Should I use Funui Studio?</h2>
         <p className='text-foreground/80'>
           shadcn/ui aims to provide core components with a unique distribution system, allowing developers to copy and
           paste reusable, customizable UI elements directly into their codebase.
@@ -97,7 +97,7 @@ const DocsPage = () => {
       </div>
 
       <div className='flex flex-col space-y-3'>
-        <h3 className='text-lg font-semibold sm:text-xl'>This is where shadcn/studio shines ✨</h3>
+        <h3 className='text-lg font-semibold sm:text-xl'>This is where Funui Studio shines ✨</h3>
         <p className='text-foreground/80'>
           An open-source & premium collection of copy-and-paste shadcn components, blocks, and templates - paired with a
           powerful theme generator & AI Tools to craft, customize, and ship faster 🚀. It provides a robust toolkit for
@@ -158,17 +158,17 @@ const DocsPage = () => {
             . Preview changes in real time and create consistent, on-brand designs faster.
           </li>
           <li>
-            <span className='text-foreground font-semibold'>shadcn/studio MCP:</span> Integrate{' '}
+            <span className='text-foreground font-semibold'>Funui Studio MCP:</span> Integrate{' '}
             <Link
               href='https://shadcnstudio.com/mcp'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary underline'
             >
-              shadcn/studio MCP
+              Funui Studio MCP
             </Link>{' '}
             Server directly into your favorite IDE and craft stunning shadcn/ui Components, Blocks and Pages inspired by
-            shadcn/studio.
+            Funui Studio.
           </li>
           <li>
             <span className='text-foreground font-semibold'>Shadcn Figma To Code Plugin:</span> Convert your Figma

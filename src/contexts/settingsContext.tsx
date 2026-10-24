@@ -79,12 +79,12 @@ export const SettingsProvider = (props: Props) => {
 
   // Cookies for mode
   const [modeCookie, updateModeCookie] = useObjectCookie<ModeSettings>(
-    'shadcn-studio-mode',
+    'funui-studio-mode',
     JSON.stringify(props.settingsCookie) !== '{}' ? props.settingsCookie : updatedInitialModeSettings
   )
 
   // localStorage for theme settings
-  const [themeSettings, setThemeSettings] = useLocalStorage<ThemeSettings>('shadcn-studio-theme', initialThemeSettings)
+  const [themeSettings, setThemeSettings] = useLocalStorage<ThemeSettings>('funui-studio-theme', initialThemeSettings)
 
   // Combined settings state
   const settings: Settings = {

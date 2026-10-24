@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-12",
-  "type": "registry:component",
   "title": "Alert 12",
   "description": "Information/error indicator alert with destructive background styling and informational content.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-12.tsx",
-      "content": "import { UserRoundXIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\n\nconst AlertIndicatorDestructiveDemo = () => {\n  return (\n    <Alert className='border-destructive bg-destructive/10 text-destructive rounded-none border-0 border-l-6'>\n      <UserRoundXIcon />\n      <AlertTitle>Your request to join the team is denied.</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertIndicatorDestructiveDemo\n",
+      "content": "import { UserRoundXIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle } from '@/components/ui/alert'\r\n\r\nconst AlertIndicatorDestructiveDemo = () => {\r\n  return (\r\n    <Alert className='border-destructive bg-destructive/10 text-destructive rounded-none border-0 border-l-6'>\r\n      <UserRoundXIcon />\r\n      <AlertTitle>Your request to join the team is denied.</AlertTitle>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertIndicatorDestructiveDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-12.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

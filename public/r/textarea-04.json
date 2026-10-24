@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-04",
-  "type": "registry:component",
   "title": "Textarea 4",
   "description": "A textarea with right-aligned helper text for guidance",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/textarea/textarea-04.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaWithHelperTextRightDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Textarea with right helper text</Label>\n      <Textarea placeholder='Type your feedback here' id={id} />\n      <p className='text-muted-foreground text-end text-xs'>Your feedback is useful for us.</p>\n    </div>\n  )\n}\n\nexport default TextareaWithHelperTextRightDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport { Textarea } from '@/components/ui/textarea'\r\n\r\nconst TextareaWithHelperTextRightDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Textarea with right helper text</Label>\r\n      <Textarea placeholder='Type your feedback here' id={id} />\r\n      <p className='text-muted-foreground text-end text-xs'>Your feedback is useful for us.</p>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TextareaWithHelperTextRightDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/textarea/textarea-04.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

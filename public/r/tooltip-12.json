@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "tooltip-12",
-  "type": "registry:component",
   "title": "Tooltip 12",
   "description": "A hover card displaying statistics with avatar and growth metrics",
   "registryDependencies": [
@@ -12,9 +11,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/tooltip/tooltip-12.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\nimport { Button } from '@/components/ui/button'\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\n\nconst HoverCardStatsDemo = () => {\n  return (\n    <HoverCard openDelay={0} closeDelay={0}>\n      <HoverCardTrigger asChild>\n        <Button variant='link'>Hover Card Stats</Button>\n      </HoverCardTrigger>\n      <HoverCardContent className='w-fit'>\n        <div className='flex items-center gap-1.5'>\n          <div className='flex flex-col gap-1'>\n            <div className='text-sm font-medium'>Total page views</div>\n            <div className='text-xl font-semibold'>89,400</div>\n            <div className='text-muted-foreground text-xs'>21% ↗︎ than last month</div>\n          </div>\n          <Avatar className='size-10'>\n            <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n            <AvatarFallback className='text-xs'>HR</AvatarFallback>\n          </Avatar>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  )\n}\n\nexport default HoverCardStatsDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\nimport { Button } from '@/components/ui/button'\r\nimport { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'\r\n\r\nconst HoverCardStatsDemo = () => {\r\n  return (\r\n    <HoverCard openDelay={0} closeDelay={0}>\r\n      <HoverCardTrigger asChild>\r\n        <Button variant='link'>Hover Card Stats</Button>\r\n      </HoverCardTrigger>\r\n      <HoverCardContent className='w-fit'>\r\n        <div className='flex items-center gap-1.5'>\r\n          <div className='flex flex-col gap-1'>\r\n            <div className='text-sm font-medium'>Total page views</div>\r\n            <div className='text-xl font-semibold'>89,400</div>\r\n            <div className='text-muted-foreground text-xs'>21% ↗︎ than last month</div>\r\n          </div>\r\n          <Avatar className='size-10'>\r\n            <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\r\n            <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n          </Avatar>\r\n        </div>\r\n      </HoverCardContent>\r\n    </HoverCard>\r\n  )\r\n}\r\n\r\nexport default HoverCardStatsDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/tooltip/tooltip-12.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

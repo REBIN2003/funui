@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-14",
-  "type": "registry:component",
   "title": "Alert 14",
   "description": "Error indicator alert with red styling and destructive error message.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-14.tsx",
-      "content": "import { TriangleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle } from '@/components/ui/alert'\n\nconst AlertDestructiveDemo = () => {\n  return (\n    <Alert variant='destructive'>\n      <TriangleAlertIcon />\n      <AlertTitle>Something went wrong!</AlertTitle>\n    </Alert>\n  )\n}\n\nexport default AlertDestructiveDemo\n",
+      "content": "import { TriangleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle } from '@/components/ui/alert'\r\n\r\nconst AlertDestructiveDemo = () => {\r\n  return (\r\n    <Alert variant='destructive'>\r\n      <TriangleAlertIcon />\r\n      <AlertTitle>Something went wrong!</AlertTitle>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertDestructiveDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-14.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

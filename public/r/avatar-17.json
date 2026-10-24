@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-17",
-  "type": "registry:component",
   "title": "Avatar 17",
   "description": "Avatar group with smooth spacing transition on hover interaction.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-17.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst avatars = [\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\n    fallback: 'OS',\n    name: 'Olivia Sparks'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\n    fallback: 'HL',\n    name: 'Howard Lloyd'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\n    fallback: 'HR',\n    name: 'Hallie Richards'\n  },\n  {\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-16.png',\n    fallback: 'JW',\n    name: 'Jenny Wilson'\n  }\n]\n\nconst AvatarGroupTransitionDemo = () => {\n  return (\n    <div className='flex -space-x-2 hover:space-x-1'>\n      {avatars.map((avatar, index) => (\n        <Avatar key={index} className='ring-background ring-2 transition-all duration-300 ease-in-out'>\n          <AvatarImage src={avatar.src} alt={avatar.name} />\n          <AvatarFallback className='text-xs'>{avatar.fallback}</AvatarFallback>\n        </Avatar>\n      ))}\n    </div>\n  )\n}\n\nexport default AvatarGroupTransitionDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst avatars = [\r\n  {\r\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',\r\n    fallback: 'OS',\r\n    name: 'Olivia Sparks'\r\n  },\r\n  {\r\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',\r\n    fallback: 'HL',\r\n    name: 'Howard Lloyd'\r\n  },\r\n  {\r\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',\r\n    fallback: 'HR',\r\n    name: 'Hallie Richards'\r\n  },\r\n  {\r\n    src: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-16.png',\r\n    fallback: 'JW',\r\n    name: 'Jenny Wilson'\r\n  }\r\n]\r\n\r\nconst AvatarGroupTransitionDemo = () => {\r\n  return (\r\n    <div className='flex -space-x-2 hover:space-x-1'>\r\n      {avatars.map((avatar, index) => (\r\n        <Avatar key={index} className='ring-background ring-2 transition-all duration-300 ease-in-out'>\r\n          <AvatarImage src={avatar.src} alt={avatar.name} />\r\n          <AvatarFallback className='text-xs'>{avatar.fallback}</AvatarFallback>\r\n        </Avatar>\r\n      ))}\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default AvatarGroupTransitionDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-17.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-01",
-  "type": "registry:component",
   "title": "Badge 1",
   "description": "Default badge demonstrating basic styling with standard text display",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-01.tsx",
-      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeDemo = () => {\n  return <Badge>Default</Badge>\n}\n\nexport default BadgeDemo\n",
+      "content": "import { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgeDemo = () => {\r\n  return <Badge>Default</Badge>\r\n}\r\n\r\nexport default BadgeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-01.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea-21",
-  "type": "registry:component",
   "title": "Textarea 21",
   "description": "A disabled textarea in non-interactive state for form display",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/textarea/textarea-21.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Label } from '@/components/ui/label'\nimport { Textarea } from '@/components/ui/textarea'\n\nconst TextareaDisabledDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Disabled textarea</Label>\n      <Textarea placeholder='Type your feedback here' disabled id={id} />\n    </div>\n  )\n}\n\nexport default TextareaDisabledDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Label } from '@/components/ui/label'\r\nimport { Textarea } from '@/components/ui/textarea'\r\n\r\nconst TextareaDisabledDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Disabled textarea</Label>\r\n      <Textarea placeholder='Type your feedback here' disabled id={id} />\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default TextareaDisabledDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/textarea/textarea-21.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

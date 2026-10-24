@@ -23,6 +23,9 @@ import V4Page from '@/components/examples/v4'
 // Util Imports
 import { cn } from '@/lib/utils'
 
+// Config Imports
+import { siteConfig } from '@/config/site'
+
 // Data Imports
 import { features } from '@/assets/data/features'
 import { faqs } from '@/assets/data/faqs'
@@ -36,8 +39,8 @@ export const metadata: Metadata = {
     description:
       'Create & customize themes with Shadcn Theme Generator easily. Customize styles, colors, fonts, & pre-built themes for light/dark modes in real-time.',
     type: 'website',
-    siteName: 'Shadcn Studio',
-    url: `${process.env.NEXT_PUBLIC_APP_URL}/theme-generator`,
+    siteName: siteConfig.name,
+    url: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/theme-generator`,
     images: [
       {
         url: 'https://cdn.themeselection.com/ts-assets/shadcn-studio/theme-generator/marketing/shadcn-studio-smm-banner.png',
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
       'Create & customize themes with Shadcn Theme Generator easily. Customize styles, colors, fonts, & pre-built themes for light/dark modes in real-time.'
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_APP_URL}/theme-generator`
+    canonical: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}/theme-generator`
   }
 }
 

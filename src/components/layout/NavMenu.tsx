@@ -45,6 +45,14 @@ const NavMenu = () => {
       >
         Components
       </Link>
+      <Link
+        href='/react-library'
+        className={cn('text-muted-foreground hover:text-foreground flex items-center gap-2 text-sm', {
+          'text-primary hover:text-primary/80 font-medium': pathname.startsWith('/react-library')
+        })}
+      >
+        React Library
+      </Link>
     </div>
   )
 }

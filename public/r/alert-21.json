@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-21",
-  "type": "registry:component",
   "title": "Alert 21",
   "description": "Soft primary alert with subtle background and text styling for secondary messages.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-21.tsx",
-      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSoftDemo = () => {\n  return (\n    <Alert className='bg-primary/10 border-none'>\n      <CircleAlertIcon />\n      <AlertTitle>File Should be PDF,DOCX,JPG, or PNG.</AlertTitle>\n      <AlertDescription>If the file type is not one of this than we can&apos;t get your files</AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSoftDemo\n",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertSoftDemo = () => {\r\n  return (\r\n    <Alert className='bg-primary/10 border-none'>\r\n      <CircleAlertIcon />\r\n      <AlertTitle>File Should be PDF,DOCX,JPG, or PNG.</AlertTitle>\r\n      <AlertDescription>If the file type is not one of this than we can&apos;t get your files</AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertSoftDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-21.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

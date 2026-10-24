@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "checkbox-07",
-  "type": "registry:component",
   "title": "Checkbox 7",
   "description": "Checkbox with description text providing additional context and information",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/checkbox/checkbox-07.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Checkbox } from '@/components/ui/checkbox'\nimport { Label } from '@/components/ui/label'\n\nconst CheckboxDescriptionDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='flex items-start gap-2'>\n      <Checkbox id={id} defaultChecked />\n      <div className='grid gap-2'>\n        <Label htmlFor={id} className='leading-4'>\n          Accept terms and conditions\n        </Label>\n        <p className='text-muted-foreground text-xs'>\n          By clicking this checkbox, you agree to the terms and conditions.\n        </p>\n      </div>\n    </div>\n  )\n}\n\nexport default CheckboxDescriptionDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Checkbox } from '@/components/ui/checkbox'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst CheckboxDescriptionDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='flex items-start gap-2'>\r\n      <Checkbox id={id} defaultChecked />\r\n      <div className='grid gap-2'>\r\n        <Label htmlFor={id} className='leading-4'>\r\n          Accept terms and conditions\r\n        </Label>\r\n        <p className='text-muted-foreground text-xs'>\r\n          By clicking this checkbox, you agree to the terms and conditions.\r\n        </p>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CheckboxDescriptionDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/checkbox/checkbox-07.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

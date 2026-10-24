@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "radio-group-05",
-  "type": "registry:component",
   "title": "Radio Group 5",
   "description": "A radio group with dashed borders",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/radio-group/radio-group-05.tsx",
-      "content": "import { Label } from '@/components/ui/label'\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\n\nconst RadioGroupDashedDemo = () => {\n  return (\n    <RadioGroup defaultValue='standard'>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='standard'\n          id='standard'\n          className='border-primary focus-visible:border-primary border-dashed'\n        />\n        <Label htmlFor='standard'>Standard Shipping</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='express'\n          id='express'\n          className='border-primary focus-visible:border-primary border-dashed'\n        />\n        <Label htmlFor='express'>Express Delivery</Label>\n      </div>\n      <div className='flex items-center gap-2'>\n        <RadioGroupItem\n          value='overnight'\n          id='overnight'\n          className='border-primary focus-visible:border-primary border-dashed'\n        />\n        <Label htmlFor='overnight'>Overnight Shipping</Label>\n      </div>\n    </RadioGroup>\n  )\n}\n\nexport default RadioGroupDashedDemo\n",
+      "content": "import { Label } from '@/components/ui/label'\r\nimport { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'\r\n\r\nconst RadioGroupDashedDemo = () => {\r\n  return (\r\n    <RadioGroup defaultValue='standard'>\r\n      <div className='flex items-center gap-2'>\r\n        <RadioGroupItem\r\n          value='standard'\r\n          id='standard'\r\n          className='border-primary focus-visible:border-primary border-dashed'\r\n        />\r\n        <Label htmlFor='standard'>Standard Shipping</Label>\r\n      </div>\r\n      <div className='flex items-center gap-2'>\r\n        <RadioGroupItem\r\n          value='express'\r\n          id='express'\r\n          className='border-primary focus-visible:border-primary border-dashed'\r\n        />\r\n        <Label htmlFor='express'>Express Delivery</Label>\r\n      </div>\r\n      <div className='flex items-center gap-2'>\r\n        <RadioGroupItem\r\n          value='overnight'\r\n          id='overnight'\r\n          className='border-primary focus-visible:border-primary border-dashed'\r\n        />\r\n        <Label htmlFor='overnight'>Overnight Shipping</Label>\r\n      </div>\r\n    </RadioGroup>\r\n  )\r\n}\r\n\r\nexport default RadioGroupDashedDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/radio-group/radio-group-05.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

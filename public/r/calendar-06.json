@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "calendar-06",
-  "type": "registry:component",
   "title": "Calendar 6",
   "description": "Calendar with disabled dates before a specific date for restricted selection",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/calendar/calendar-06.tsx",
-      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Calendar } from '@/components/ui/calendar'\n\nconst CalendarDisableDayDemo = () => {\n  const [date, setDate] = useState<Date | undefined>(new Date(2025, 5, 18))\n\n  return (\n    <div>\n      <Calendar\n        mode='single'\n        defaultMonth={date}\n        selected={date}\n        onSelect={setDate}\n        disabled={{\n          before: new Date(2025, 5, 12)\n        }}\n        className='rounded-lg border'\n      />\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\n        Disabled day calendar\n      </p>\n    </div>\n  )\n}\n\nexport default CalendarDisableDayDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\n\r\nimport { Calendar } from '@/components/ui/calendar'\r\n\r\nconst CalendarDisableDayDemo = () => {\r\n  const [date, setDate] = useState<Date | undefined>(new Date(2025, 5, 18))\r\n\r\n  return (\r\n    <div>\r\n      <Calendar\r\n        mode='single'\r\n        defaultMonth={date}\r\n        selected={date}\r\n        onSelect={setDate}\r\n        disabled={{\r\n          before: new Date(2025, 5, 12)\r\n        }}\r\n        className='rounded-lg border'\r\n      />\r\n      <p className='text-muted-foreground mt-3 text-center text-xs' role='region'>\r\n        Disabled day calendar\r\n      </p>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default CalendarDisableDayDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/calendar/calendar-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

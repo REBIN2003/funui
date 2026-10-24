@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "popover-04",
-  "type": "registry:component",
   "title": "Popover 4",
   "description": "A volume control popover with a slider for adjusting audio levels",
   "dependencies": [
@@ -16,9 +15,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/popover/popover-04.tsx",
-      "content": "'use client'\n\nimport { useState } from 'react'\n\nimport { Volume2Icon, VolumeXIcon } from 'lucide-react'\n\nimport { Button } from '@/components/ui/button'\nimport { Label } from '@/components/ui/label'\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\nimport { Slider } from '@/components/ui/slider'\n\nconst PopoverVolumeDemo = () => {\n  const [value, setValue] = useState([45])\n\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button variant='outline' size='icon'>\n          <Volume2Icon />\n          <span className='sr-only'>Volume control</span>\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className='w-80'>\n        <div className='space-y-3'>\n          <div className='flex items-center justify-between gap-2'>\n            <Label className='leading-5'>Volume</Label>\n            <output className='text-sm font-medium tabular-nums'>{value[0]}</output>\n          </div>\n          <div className='flex items-center gap-2'>\n            <VolumeXIcon className='size-4 shrink-0 opacity-60' />\n            <Slider value={value} onValueChange={setValue} aria-label='Volume slider' />\n            <Volume2Icon className='size-4 shrink-0 opacity-60' />\n          </div>\n        </div>\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport default PopoverVolumeDemo\n",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\n\r\nimport { Volume2Icon, VolumeXIcon } from 'lucide-react'\r\n\r\nimport { Button } from '@/components/ui/button'\r\nimport { Label } from '@/components/ui/label'\r\nimport { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\r\nimport { Slider } from '@/components/ui/slider'\r\n\r\nconst PopoverVolumeDemo = () => {\r\n  const [value, setValue] = useState([45])\r\n\r\n  return (\r\n    <Popover>\r\n      <PopoverTrigger asChild>\r\n        <Button variant='outline' size='icon'>\r\n          <Volume2Icon />\r\n          <span className='sr-only'>Volume control</span>\r\n        </Button>\r\n      </PopoverTrigger>\r\n      <PopoverContent className='w-80'>\r\n        <div className='space-y-3'>\r\n          <div className='flex items-center justify-between gap-2'>\r\n            <Label className='leading-5'>Volume</Label>\r\n            <output className='text-sm font-medium tabular-nums'>{value[0]}</output>\r\n          </div>\r\n          <div className='flex items-center gap-2'>\r\n            <VolumeXIcon className='size-4 shrink-0 opacity-60' />\r\n            <Slider value={value} onValueChange={setValue} aria-label='Volume slider' />\r\n            <Volume2Icon className='size-4 shrink-0 opacity-60' />\r\n          </div>\r\n        </div>\r\n      </PopoverContent>\r\n    </Popover>\r\n  )\r\n}\r\n\r\nexport default PopoverVolumeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/popover/popover-04.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

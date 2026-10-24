@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-06",
-  "type": "registry:component",
   "title": "Button 6",
   "description": "Grouped action buttons for Cancel and Save operations",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-06.tsx",
-      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonActionsDemo = () => {\n  return (\n    <div className='flex flex-wrap items-center gap-4'>\n      <Button variant='secondary'>Cancel</Button>\n      <Button>Save Changes</Button>\n    </div>\n  )\n}\n\nexport default ButtonActionsDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\n\r\nconst ButtonActionsDemo = () => {\r\n  return (\r\n    <div className='flex flex-wrap items-center gap-4'>\r\n      <Button variant='secondary'>Cancel</Button>\r\n      <Button>Save Changes</Button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default ButtonActionsDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

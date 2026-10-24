@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-06",
-  "type": "registry:component",
   "title": "Badge 6",
   "description": "Rounded badge with full border radius for pill-shaped appearance",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-06.tsx",
-      "content": "import { Badge } from '@/components/ui/badge'\n\nconst BadgeRoundedDemo = () => {\n  return <Badge className='rounded-sm'>Rounded</Badge>\n}\n\nexport default BadgeRoundedDemo\n",
+      "content": "import { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgeRoundedDemo = () => {\r\n  return <Badge className='rounded-sm'>Rounded</Badge>\r\n}\r\n\r\nexport default BadgeRoundedDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-06.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

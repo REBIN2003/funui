@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-02",
-  "type": "registry:component",
   "title": "Avatar 2",
   "description": "Avatar with ring border highlighting for active or selected states.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-02.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarRingDemo = () => {\n  return (\n    <Avatar className='ring-ring ring-2'>\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\n    </Avatar>\n  )\n}\n\nexport default AvatarRingDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst AvatarRingDemo = () => {\r\n  return (\r\n    <Avatar className='ring-ring ring-2'>\r\n      <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\r\n      <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n    </Avatar>\r\n  )\r\n}\r\n\r\nexport default AvatarRingDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-02.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

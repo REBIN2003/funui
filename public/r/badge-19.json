@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge-19",
-  "type": "registry:component",
   "title": "Badge 19",
   "description": "Pending status badge with amber outline and alert icon",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/badge/badge-19.tsx",
-      "content": "import { AlertCircleIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\n\nconst BadgePendingDemo = () => {\n  return (\n    <Badge\n      variant='outline'\n      className='rounded-sm border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400 [a&]:hover:bg-amber-600/10 [a&]:hover:text-amber-600/90 dark:[a&]:hover:bg-amber-400/10 dark:[a&]:hover:text-amber-400/90'\n    >\n      <AlertCircleIcon className='size-3' />\n      Pending\n    </Badge>\n  )\n}\n\nexport default BadgePendingDemo\n",
+      "content": "import { AlertCircleIcon } from 'lucide-react'\r\n\r\nimport { Badge } from '@/components/ui/badge'\r\n\r\nconst BadgePendingDemo = () => {\r\n  return (\r\n    <Badge\r\n      variant='outline'\r\n      className='rounded-sm border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400 [a&]:hover:bg-amber-600/10 [a&]:hover:text-amber-600/90 dark:[a&]:hover:bg-amber-400/10 dark:[a&]:hover:text-amber-400/90'\r\n    >\r\n      <AlertCircleIcon className='size-3' />\r\n      Pending\r\n    </Badge>\r\n  )\r\n}\r\n\r\nexport default BadgePendingDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/badge/badge-19.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

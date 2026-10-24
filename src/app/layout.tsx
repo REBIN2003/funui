@@ -11,6 +11,9 @@ import { SettingsProvider } from '@/contexts/settingsContext'
 import { ThemeProvider } from '@/providers/ThemesProvider'
 import { Toaster } from '@/components/ui/sonner'
 
+// Config Imports
+import { siteConfig } from '@/config/site'
+
 // Util Imports
 import { getSettingsFromCookie } from '@/utils/serverHelpers'
 import { cn } from '@/lib/utils'
@@ -36,69 +39,33 @@ const fontKalam = Kalam({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'),
   title: {
-    template: '%s - Shadcn Studio',
-    default: 'Shadcn Studio - Shadcn UI Components, Blocks & Templates'
+    template: `%s - ${siteConfig.name}`,
+    default: `${siteConfig.name} - UI Components, Blocks & Templates`
   },
-  description:
-    'Accelerate your project development with ready-to-use, & customizable 1000+ Shadcn UI Components, Blocks, UI Kit, Boilerplate, Templates & Themes with AI Tools.',
-  keywords: ['shadcn ui', 'shadcn/ui', 'shadcn studio', 'shadcn ui library', 'shadcn/ui library'],
-  icons: {
-    icon: [
-      { url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/favicon.ico', sizes: '48x48', type: 'image/x-icon' }
-    ],
-    apple: [
-      {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/apple-touch-icon.png',
-        sizes: '180x180',
-        type: 'image/png'
-      }
-    ],
-    other: [
-      {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/android-chrome-192x192.png',
-        rel: 'icon',
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/favicon/android-chrome-512x512.png',
-        rel: 'icon',
-        sizes: '512x512',
-        type: 'image/png'
-      }
-    ]
+  description: siteConfig.description,
+  keywords: ['funui studio', 'funui', 'ui components', 'shadcn', 'react components', 'theme generator', 'ui library'],
+  alternates: {
+    canonical: '/'
   },
   openGraph: {
     title: {
-      template: '%s - Shadcn Studio',
-      default: 'Shadcn Studio - Shadcn UI Components, Blocks & Templates'
+      template: `%s - ${siteConfig.name}`,
+      default: `${siteConfig.name} - UI Components, Blocks & Templates`
     },
-    description:
-      'Accelerate your project development with ready-to-use, & customizable 1000+ Shadcn UI Components, Blocks, UI Kit, Boilerplate, Templates & Themes with AI Tools.',
+    description: siteConfig.description,
     type: 'website',
-    siteName: 'Shadcn Studio',
-    url: `${process.env.NEXT_PUBLIC_APP_URL}`,
-    images: [
-      {
-        url: 'https://cdn.shadcnstudio.com/ss-assets/smm/marketing/shadcn-studio-smm-banner.png',
-        type: 'image/png',
-        width: 1200,
-        height: 630,
-        alt: 'Shadcn Studio - Shadcn UI Components, Blocks & Templates'
-      }
-    ]
+    siteName: siteConfig.name,
+    url: `${process.env.NEXT_PUBLIC_APP_URL || siteConfig.url || 'https://funui1.netlify.app'}`
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      template: '%s - Shadcn Studio',
-      default: 'Shadcn Studio - Shadcn UI Components, Blocks & Templates'
+      template: `%s - ${siteConfig.name}`,
+      default: `${siteConfig.name} - UI Components, Blocks & Templates`
     },
-    description:
-      'Accelerate your project development with ready-to-use, & customizable 1000+ Shadcn UI Components, Blocks, UI Kit, Boilerplate, Templates & Themes with AI Tools.'
+    description: siteConfig.description
   }
 }
 
@@ -109,6 +76,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
   return (
     <html
       lang='en'
+      suppressHydrationWarning
       className={cn(
         fontSans.variable,
         fontMono.variable,

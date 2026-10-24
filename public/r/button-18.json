@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-18",
-  "type": "registry:component",
   "title": "Button 18",
   "description": "Link button with animated underline effect on hover",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-18.tsx",
-      "content": "import { Button } from '@/components/ui/button'\n\nconst ButtonAnimatedLinkDemo = () => {\n  return (\n    <Button\n      variant='link'\n      className='after:bg-primary relative !no-underline after:absolute after:bottom-2 after:h-px after:w-2/3 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100'\n      asChild\n    >\n      <a href='#'>Contact Us</a>\n    </Button>\n  )\n}\n\nexport default ButtonAnimatedLinkDemo\n",
+      "content": "import { Button } from '@/components/ui/button'\r\n\r\nconst ButtonAnimatedLinkDemo = () => {\r\n  return (\r\n    <Button\r\n      variant='link'\r\n      className='after:bg-primary relative !no-underline after:absolute after:bottom-2 after:h-px after:w-2/3 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100'\r\n      asChild\r\n    >\r\n      <a href='#'>Contact Us</a>\r\n    </Button>\r\n  )\r\n}\r\n\r\nexport default ButtonAnimatedLinkDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-18.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

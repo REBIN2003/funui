@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-35",
-  "type": "registry:component",
   "title": "Button 35",
   "description": "Mail icon button with notification badge counter for unread messages",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-35.tsx",
-      "content": "import { MailCheckIcon } from 'lucide-react'\n\nimport { Badge } from '@/components/ui/badge'\nimport { Button } from '@/components/ui/button'\n\nconst IconButtonBadgeDemo = () => {\n  return (\n    <Button variant='outline' size='icon' className='relative'>\n      <MailCheckIcon />\n      <span className='sr-only'>Messages</span>\n      <Badge variant='destructive' className='absolute -top-2.5 -right-2.5 h-5 min-w-5 px-1 tabular-nums'>\n        8\n      </Badge>\n    </Button>\n  )\n}\n\nexport default IconButtonBadgeDemo\n",
+      "content": "import { MailCheckIcon } from 'lucide-react'\r\n\r\nimport { Badge } from '@/components/ui/badge'\r\nimport { Button } from '@/components/ui/button'\r\n\r\nconst IconButtonBadgeDemo = () => {\r\n  return (\r\n    <Button variant='outline' size='icon' className='relative'>\r\n      <MailCheckIcon />\r\n      <span className='sr-only'>Messages</span>\r\n      <Badge variant='destructive' className='absolute -top-2.5 -right-2.5 h-5 min-w-5 px-1 tabular-nums'>\r\n        8\r\n      </Badge>\r\n    </Button>\r\n  )\r\n}\r\n\r\nexport default IconButtonBadgeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-35.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

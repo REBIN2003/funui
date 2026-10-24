@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-12",
-  "type": "registry:component",
   "title": "Avatar 12",
   "description": "Avatar with verified badge showing check mark icon for verified accounts.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-12.tsx",
-      "content": "import { BadgeCheckIcon } from 'lucide-react'\n\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarVerifiedDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar className='size-10'>\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <span className='absolute -top-1.5 -right-1.5'>\n        <span className='sr-only'>Verified</span>\n        <BadgeCheckIcon className='text-background size-5 fill-sky-500' />\n      </span>\n    </div>\n  )\n}\n\nexport default AvatarVerifiedDemo\n",
+      "content": "import { BadgeCheckIcon } from 'lucide-react'\r\n\r\nimport { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst AvatarVerifiedDemo = () => {\r\n  return (\r\n    <div className='relative w-fit'>\r\n      <Avatar className='size-10'>\r\n        <AvatarImage src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png' alt='Hallie Richards' />\r\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n      </Avatar>\r\n      <span className='absolute -top-1.5 -right-1.5'>\r\n        <span className='sr-only'>Verified</span>\r\n        <BadgeCheckIcon className='text-background size-5 fill-sky-500' />\r\n      </span>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default AvatarVerifiedDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-12.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

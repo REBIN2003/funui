@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "alert-28",
-  "type": "registry:component",
   "title": "Alert 28",
   "description": "Solid warning alert with full amber background for prominent warning messages.",
   "dependencies": [
@@ -13,9 +12,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/alert/alert-28.tsx",
-      "content": "import { CircleAlertIcon } from 'lucide-react'\n\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\n\nconst AlertSolidWarningDemo = () => {\n  return (\n    <Alert className='border-none bg-amber-600 text-white dark:bg-amber-400'>\n      <CircleAlertIcon />\n      <AlertTitle>Some details are missing</AlertTitle>\n      <AlertDescription className='text-white/80'>Complete your profile to get the best experience.</AlertDescription>\n    </Alert>\n  )\n}\n\nexport default AlertSolidWarningDemo\n",
+      "content": "import { CircleAlertIcon } from 'lucide-react'\r\n\r\nimport { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'\r\n\r\nconst AlertSolidWarningDemo = () => {\r\n  return (\r\n    <Alert className='border-none bg-amber-600 text-white dark:bg-amber-400'>\r\n      <CircleAlertIcon />\r\n      <AlertTitle>Some details are missing</AlertTitle>\r\n      <AlertDescription className='text-white/80'>Complete your profile to get the best experience.</AlertDescription>\r\n    </Alert>\r\n  )\r\n}\r\n\r\nexport default AlertSolidWarningDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/alert/alert-28.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

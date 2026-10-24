@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-44",
-  "type": "registry:component",
   "title": "Button 44",
   "description": "Button with bounce hover effect on mouse interaction",
   "dependencies": [
@@ -15,18 +14,19 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/button/button-44.tsx",
-      "content": "import { BounceButton } from '@/components/ui/bounce-button'\n\nconst ButtonBounceHoverDemo = () => {\n  return <BounceButton>Bounce Button</BounceButton>\n}\n\nexport default ButtonBounceHoverDemo\n",
+      "content": "import { BounceButton } from '@/components/ui/bounce-button'\r\n\r\nconst ButtonBounceHoverDemo = () => {\r\n  return <BounceButton>Bounce Button</BounceButton>\r\n}\r\n\r\nexport default ButtonBounceHoverDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/button/button-44.tsx"
     },
     {
       "path": "src/components/ui/bounce-button.tsx",
-      "content": "'use client'\n\nimport * as React from 'react'\n\nimport { motion, type HTMLMotionProps } from 'motion/react'\nimport type { VariantProps } from 'class-variance-authority'\n\nimport { cn } from '@/lib/utils'\nimport { buttonVariants } from '@/components/ui/button'\n\ninterface BounceButtonProps extends HTMLMotionProps<'button'>, VariantProps<typeof buttonVariants> {\n  children: React.ReactNode\n}\n\nfunction BounceButton({ children, className, size, variant, ...props }: BounceButtonProps) {\n  return (\n    <motion.button\n      whileHover={{ scale: 1.1 }}\n      className={cn(buttonVariants({ variant, size }), 'transition-none', className)}\n      transition={{ type: 'spring', stiffness: 400, damping: 10 }}\n      {...props}\n    >\n      {children}\n    </motion.button>\n  )\n}\n\nexport { BounceButton, type BounceButtonProps }\n",
+      "content": "'use client'\r\n\r\nimport * as React from 'react'\r\n\r\nimport { motion, type HTMLMotionProps } from 'motion/react'\r\nimport type { VariantProps } from 'class-variance-authority'\r\n\r\nimport { cn } from '@/lib/utils'\r\nimport { buttonVariants } from '@/components/ui/button'\r\n\r\ninterface BounceButtonProps extends HTMLMotionProps<'button'>, VariantProps<typeof buttonVariants> {\r\n  children: React.ReactNode\r\n}\r\n\r\nfunction BounceButton({ children, className, size, variant, ...props }: BounceButtonProps) {\r\n  return (\r\n    <motion.button\r\n      whileHover={{ scale: 1.1 }}\r\n      className={cn(buttonVariants({ variant, size }), 'transition-none', className)}\r\n      transition={{ type: 'spring', stiffness: 400, damping: 10 }}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </motion.button>\r\n  )\r\n}\r\n\r\nexport { BounceButton, type BounceButtonProps }\r\n",
       "type": "registry:ui",
       "target": "components/ui/bounce-button.tsx"
     }
   ],
   "meta": {
     "isAnimated": true
-  }
+  },
+  "type": "registry:component"
 }

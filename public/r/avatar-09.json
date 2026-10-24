@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatar-09",
-  "type": "registry:component",
   "title": "Avatar 9",
   "description": "Status avatar with away indicator showing amber status dot for absent/away state.",
   "registryDependencies": [
@@ -10,9 +9,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/avatar/avatar-09.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nconst AvatarStatusAwayDemo = () => {\n  return (\n    <div className='relative w-fit'>\n      <Avatar className='rounded-sm'>\n        <AvatarImage\n          src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\n          alt='Hallie Richards'\n          className='rounded-sm'\n        />\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\n      </Avatar>\n      <span className='border-background absolute -top-1.5 -right-1.5 size-3 rounded-full border-2 bg-amber-600 dark:bg-amber-400'>\n        <span className='sr-only'>Away</span>\n      </span>\n    </div>\n  )\n}\n\nexport default AvatarStatusAwayDemo\n",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\r\n\r\nconst AvatarStatusAwayDemo = () => {\r\n  return (\r\n    <div className='relative w-fit'>\r\n      <Avatar className='rounded-sm'>\r\n        <AvatarImage\r\n          src='https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png'\r\n          alt='Hallie Richards'\r\n          className='rounded-sm'\r\n        />\r\n        <AvatarFallback className='text-xs'>HR</AvatarFallback>\r\n      </Avatar>\r\n      <span className='border-background absolute -top-1.5 -right-1.5 size-3 rounded-full border-2 bg-amber-600 dark:bg-amber-400'>\r\n        <span className='sr-only'>Away</span>\r\n      </span>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default AvatarStatusAwayDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/avatar/avatar-09.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

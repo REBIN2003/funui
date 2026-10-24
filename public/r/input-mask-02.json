@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-mask-02",
-  "type": "registry:component",
   "title": "Input Mask 2",
   "description": "A time input field with HH:MM:SS mask formatting for precise time entry",
   "dependencies": [
@@ -14,9 +13,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input-mask/input-mask-02.tsx",
-      "content": "'use client'\n\nimport { useId } from 'react'\n\nimport { withMask } from 'use-mask-input'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputTimeDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>Input time</Label>\n      <Input\n        id={id}\n        type='text'\n        placeholder='00:00:00'\n        ref={withMask('datetime', {\n          placeholder: '_',\n          inputFormat: 'HH:MM:ss',\n          outputFormat: 'HH:MM:ss',\n          showMaskOnHover: false\n        })}\n      />\n      <p className='text-muted-foreground text-xs'>\n        Built with{' '}\n        <a\n          className='hover:text-foreground underline'\n          href='https://github.com/eduardoborges/use-mask-input'\n          target='_blank'\n          rel='noopener noreferrer'\n        >\n          use-mask-input\n        </a>\n      </p>\n    </div>\n  )\n}\n\nexport default InputTimeDemo\n",
+      "content": "'use client'\r\n\r\nimport { useId } from 'react'\r\n\r\nimport { withMask } from 'use-mask-input'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputTimeDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>Input time</Label>\r\n      <Input\r\n        id={id}\r\n        type='text'\r\n        placeholder='00:00:00'\r\n        ref={withMask('datetime', {\r\n          placeholder: '_',\r\n          inputFormat: 'HH:MM:ss',\r\n          outputFormat: 'HH:MM:ss',\r\n          showMaskOnHover: false\r\n        })}\r\n      />\r\n      <p className='text-muted-foreground text-xs'>\r\n        Built with{' '}\r\n        <a\r\n          className='hover:text-foreground underline'\r\n          href='https://github.com/eduardoborges/use-mask-input'\r\n          target='_blank'\r\n          rel='noopener noreferrer'\r\n        >\r\n          use-mask-input\r\n        </a>\r\n      </p>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputTimeDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input-mask/input-mask-02.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-2s6bX4vc.js";var t,n,r,i;function a(){return(a=e((()=>{t=e=>typeof e==`function`,n=e=>typeof e==`function`&&e.prototype&&(!!e.prototype.isReactComponent||!!e.prototype.render),r=e=>typeof e==`object`&&!!e&&e.$$typeof.toString()===`Symbol(react.forward_ref)`,i=e=>t(e)||r(e)||n(e)})))()}export{i as n,a as t};

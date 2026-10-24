@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-27",
-  "type": "registry:component",
   "title": "Input 27",
   "description": "A file input field with custom styling for the file picker button",
   "registryDependencies": [
@@ -11,9 +10,10 @@
   "files": [
     {
       "path": "src/components/shadcn-studio/input/input-27.tsx",
-      "content": "import { useId } from 'react'\n\nimport { Input } from '@/components/ui/input'\nimport { Label } from '@/components/ui/label'\n\nconst InputFileDemo = () => {\n  const id = useId()\n\n  return (\n    <div className='w-full max-w-xs space-y-2'>\n      <Label htmlFor={id}>File input</Label>\n      <Input\n        id={id}\n        type='file'\n        className='text-muted-foreground file:border-input file:text-foreground p-0 pr-3 italic file:mr-3 file:h-full file:border-0 file:border-r file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic'\n      />\n    </div>\n  )\n}\n\nexport default InputFileDemo\n",
+      "content": "import { useId } from 'react'\r\n\r\nimport { Input } from '@/components/ui/input'\r\nimport { Label } from '@/components/ui/label'\r\n\r\nconst InputFileDemo = () => {\r\n  const id = useId()\r\n\r\n  return (\r\n    <div className='w-full max-w-xs space-y-2'>\r\n      <Label htmlFor={id}>File input</Label>\r\n      <Input\r\n        id={id}\r\n        type='file'\r\n        className='text-muted-foreground file:border-input file:text-foreground p-0 pr-3 italic file:mr-3 file:h-full file:border-0 file:border-r file:border-solid file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic'\r\n      />\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default InputFileDemo\r\n",
       "type": "registry:component",
       "target": "components/shadcn-studio/input/input-27.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

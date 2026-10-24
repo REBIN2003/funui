@@ -1,0 +1,24 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="funui_bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="funui_sheen" x1="24" y1="0" x2="24" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="funui_mark" x1="24" y1="10" x2="24" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <filter id="funui_shadow" x="6" y="8" width="36" height="36" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#1E1B4B" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#funui_bg)"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="url(#funui_sheen)" stroke-width="2"/>
+  <g filter="url(#funui_shadow)">
+    <path d="M10.5 10.5C18.1075 17.5803 29.8925 17.5803 37.5 10.5C30.4197 18.1075 30.4197 29.8925 37.5 37.5C29.8925 30.4197 18.1075 30.4197 10.5 37.5C17.5803 29.8925 17.5803 18.1075 10.5 10.5Z" fill="url(#funui_mark)"/>
+  </g>
+</svg>
